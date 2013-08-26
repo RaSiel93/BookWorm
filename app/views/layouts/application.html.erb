@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookworm</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "bootstrap.min", "bootstrap-theme" %>
+  <%= javascript_include_tag "bootstrap.min", "jquery-1.10.2.min" %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p>BookWorm</p>
+<%= yield %>
+
+</body>
+</html>
