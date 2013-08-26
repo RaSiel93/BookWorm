@@ -6,7 +6,7 @@ Bookworm::Application.routes.draw do
 
   resources :books
 
-  #root 'welcome#index'
+  root 'books#index'
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
