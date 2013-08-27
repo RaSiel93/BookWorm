@@ -1,21 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div id="shelf" class="book">
+    <p id="notice"><%= notice %></p>
 
+  <div id="shelf" class="book" align="center">
+    <h1 >
+      <%= @book.title %>
+    </h1>
+    <h3>
+      Глава
+      <%= @chapter.number %>
+    </h3>
+  </div>
 
-<p>
-  <strong>ID:</strong>
-  <%= @book.id %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+    <%= link_to 'Edit', edit_book_path(@book) %> |
+    <%= link_to 'Back', books_path %>
+</div>

@@ -1,25 +1,29 @@
-<h1>Listing books</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Book', new_book_path %>
+<div id="shelf" align="center">
+    <%= link_to 'Добавить книгу', new_book_path %>
+</div>
+<% @books.each do |book| %>
+    <div id="shelf" class="book">
+        <h1>
+          <%= book.title %>
+        </h1>
+        <p>
+          <%= book.description  %>
+        </p>
+        <div>
+          <%= link_to 'Читать', book %> |
+          <%= link_to 'Изменить', edit_book_path(book) %> |
+          <%= link_to 'Удалить', book, method: :delete, data: { confirm: 'Вы уверены?' } %>
+        </div>
+    </div>
+<% end %>
+<div align="center">
+  <ul class="pagination pagination-sm">
+    <li><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+</div>
