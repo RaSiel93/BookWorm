@@ -11,6 +11,11 @@
       </div>
   <% end %>
 
+  <% if params[:book_id] != nil %>
+     <%  book_id = params[:book_id] %>
+  <% else book_id = @chapter.book_id  %>
+  <% end %>
+
   <div class="field">
     <%= f.label :Название %><br>
     <%= f.text_field :title, size: "50" %>
@@ -19,6 +24,7 @@
     <%= f.label :Номер_главы %><br>
     <%= f.number_field :number, :value => get_last_number%>
   </div>
+    <%= f.hidden_field :book_id, :value => book_id %>
   <br>
   <div class="actions">
     <%= f.submit "Применить изменения"%>

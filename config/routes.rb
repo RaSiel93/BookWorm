@@ -9,7 +9,7 @@ Bookworm::Application.routes.draw do
 
   root 'books#index'
 
-  get 'categories/:id' => 'books#index'
+  get 'categories/:id', to: 'books#index', as: :category
   #get 'tags/:tag', to: 'home#index', as: :tag
 
   devise_for :users

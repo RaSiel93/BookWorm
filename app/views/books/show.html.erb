@@ -11,12 +11,10 @@
           <%= @book.description  %>
         </p>
           <div id="book">
-              <%= link_to 'Редактировать', edit_book_path(@book) %> |
-              <%= link_to 'Удалить книгу', @book, method: :delete, data: { confirm: 'Вы уверены?' } %> |
+            <%= link_to 'Добавить главу', new_chapter_path(book_id: @book.id) %> |
+            <%= link_to 'Редактировать', edit_book_path(@book) %> |
+            <%= link_to 'Удалить книгу', @book, method: :delete, data: { confirm: 'Вы уверены?' }, remote:true %> |
             <%= link_to 'Назад', books_path %>
-          </div>
-          <div class="add_chapter">
-            <%= button_to 'Добавить главу', chapters_path(book_id: @book) %>
           </div>
     </div>
     <div>

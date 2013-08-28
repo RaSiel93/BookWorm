@@ -7,6 +7,6 @@ class Book < ActiveRecord::Base
   #    message: 'dsf дшоавдодшывода а'
   #}
 
-  has_many :chapters
+  has_many :chapters, dependent: :destroy
   has_one :category
 end
