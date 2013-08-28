@@ -69,11 +69,11 @@
   </div>
   <div class="col-lg-12">
     <div id="logo" align="center">
-      <a href=<%=books_path%>><img src="http://localhost:3000/assets/logo.png"></a>
+      <a class="btn btn-link" href=<%=books_path%>><img src="http://localhost:3000/assets/logo.png"></a>
     </div>
   </div>
   <div class="col-lg-12">
-    <div class="col-lg-2">
+    <div class="col-lg-1">
       <ul class="nav nav-stacked nav-pills">
         <li class="nav-header ">
           Категории
@@ -88,10 +88,25 @@
           <a href="#">Applications</a>
         </li>
       </ul>
-
     </div>
     <div id="bookshelf"class="col-lg-10" >
         <%= yield %>
+    </div>
+    <div class="col-lg-1">
+      <ul class="nav nav-stacked nav-pills">
+        <li class="nav-header ">
+          Категории
+        </li>
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Library</a>
+        </li>
+        <li>
+          <a href="#">Applications</a>
+        </li>
+      </ul>
     </div>
   </div>
   <div id="footer" class="col-lg-12 row-fluid ">

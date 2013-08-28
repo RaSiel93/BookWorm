@@ -4,8 +4,8 @@
     <list default="true" id="9925793e-1214-4f08-9f76-fd22598c8ad0" name="Default" comment="" />
     <ignored path="bookworm.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/application.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377640811641" ignored="false" />
-    <file path="/index.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377652964330" ignored="false" />
+    <file path="/application.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377668308087" ignored="false" />
+    <file path="/index.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377668169402" ignored="false" />
     <file path="/welcome.css.scss" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377432565188" ignored="false" />
     <file path="/routes.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377544927577" ignored="false" />
     <file path="/a.sql" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377645981481" ignored="false" />
@@ -18,21 +18,22 @@
     <file path="/20130826033406_create_users.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377488088890" ignored="false" />
     <file path="/Data Source" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377654189202" ignored="false" />
     <file path="/a.regexp" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377488562825" ignored="false" />
-    <file path="/show.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377666299302" ignored="false" />
-    <file path="/application.css" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377662338769" ignored="false" />
+    <file path="/show.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377666917783" ignored="false" />
+    <file path="/application.css" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377672854228" ignored="false" />
     <file path="/application.css.scss" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377551538304" ignored="false" />
     <file path="/bootstrap.min.css" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377553994367" ignored="false" />
-    <file path="/new.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377664830628" ignored="false" />
-    <file path="/_form.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377666204596" ignored="false" />
+    <file path="/new.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377672343530" ignored="false" />
+    <file path="/_form.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377673729262" ignored="false" />
     <file path="/edit.html.erb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377664892139" ignored="false" />
     <file path="/books_controller.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377665188615" ignored="false" />
-    <file path="/chapter.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377638800983" ignored="false" />
+    <file path="/chapter.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377668383714" ignored="false" />
     <file path="/book.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377637187748" ignored="false" />
     <file path="/20130827210706_add_column_to_chapters.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377637712466" ignored="false" />
     <file path="/chapters_controller.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377661717631" ignored="false" />
     <file path="/20130827232205_add_column_to_chapters_title.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377645775969" ignored="false" />
     <file path="/dummy.sql" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377645981481" ignored="false" />
-    <file path="/chapters_helper.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377666379443" ignored="false" />
+    <file path="/chapters_helper.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377668873527" ignored="false" />
+    <file path="/20130828071449_add_column_category_to_books.rb" changelist="9925793e-1214-4f08-9f76-fd22598c8ad0" time="1377674175996" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,88 +61,88 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/books/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="217" selection-end="217" vertical-scroll-proportion="-3.125">
+            <state line="26" column="9" selection-start="691" selection-end="691" vertical-scroll-proportion="-16.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/books/show.html.erb">
+      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="-3.75">
+            <state line="37" column="23" selection-start="787" selection-end="787" vertical-scroll-proportion="3.442623">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chapters_helper.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/helpers/chapters_helper.rb">
+      <file leaf-file-name="welcome.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="216" selection-end="216" vertical-scroll-proportion="0.28301886">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/chapters/_form.html.erb">
+      <file leaf-file-name="scaffolds.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="29" selection-start="618" selection-end="618" vertical-scroll-proportion="-12.5">
+            <state line="38" column="1" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="books_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/books_controller.rb">
+      <file leaf-file-name="20130828071449_add_column_category_to_books.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130828071449_add_column_category_to_books.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="23" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
+            <state line="2" column="45" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/chapters/index.html.erb">
+      <file leaf-file-name="20130828071527_create_category.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130828071527_create_category.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="210" selection-end="210" vertical-scroll-proportion="-6.0416665">
+            <state line="4" column="8" selection-start="125" selection-end="125" vertical-scroll-proportion="0.07109005">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chapters_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/chapters_controller.rb">
+      <file leaf-file-name="20130825151955_devise_create_users.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130825151955_devise_create_users.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/chapters/new.html.erb">
+      <file leaf-file-name="20130825152841_create_books.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130825152841_create_books.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="21" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.5">
+            <state line="2" column="31" selection-start="87" selection-end="109" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/chapters/show.html.erb">
+      <file leaf-file-name="20130827232205_add_column_to_chapters_title.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20130827232205_add_column_to_chapters_title.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="57" selection-start="287" selection-end="287" vertical-scroll-proportion="-5.625">
+            <state line="1" column="42" selection-start="69" selection-end="111" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/books/index.html.erb">
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="42" selection-start="345" selection-end="345" vertical-scroll-proportion="-8.125">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,22 +158,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/log/development.log" />
-        <option value="$PROJECT_DIR$/db/migrate/20130827232205_add_column_to_chapters_title.rb" />
-        <option value="$PROJECT_DIR$/app/views/books/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/books/new.html.erb" />
-        <option value="db-console:/77100bc/83cbc0ce-60bb-46f3-bb78-bf0fa1bbf597/" />
-        <option value="$PROJECT_DIR$/app/views/chapters/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/books/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/chapters/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/views/chapters/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/chapters/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/chapters_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/books_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/books/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/chapters/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/books/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/chapter.rb" />
         <option value="$PROJECT_DIR$/app/helpers/chapters_helper.rb" />
+        <option value="$PROJECT_DIR$/app/models/book.rb" />
+        <option value="$PROJECT_DIR$/app/views/books/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/views/books/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/books/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
+        <option value="$PROJECT_DIR$/db/migrate/20130828071449_add_column_category_to_books.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130828071527_create_category.rb" />
       </list>
     </option>
   </component>
@@ -356,28 +357,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bookworm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bookworm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chapters" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -799,15 +778,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1422" y="-4" width="1625" height="1055" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22835498" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2638271" sideWeight="0.54545456" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.34579438" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1710108" sideWeight="0.54545456" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45454547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1710108" sideWeight="0.31619936" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68380064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32683983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -880,11 +859,46 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="30" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/books/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="264" selection-end="264" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/books/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="38" selection-start="108" selection-end="108" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/chapters/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/books/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/book.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="9" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/books.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -893,111 +907,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="432" selection-end="432" vertical-scroll-proportion="0.26726058">
+        <state line="37" column="23" selection-start="787" selection-end="787" vertical-scroll-proportion="3.442623">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/77100bc/83cbc0ce-60bb-46f3-bb78-bf0fa1bbf597/bookworm_development..books">
-      <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/77100bc/83cbc0ce-60bb-46f3-bb78-bf0fa1bbf597/bookworm_development..chapters">
-      <provider editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chapters/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="95" selection-end="99" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chapters/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="65" selection-end="65" vertical-scroll-proportion="-2.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/chapters_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chapters/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="29" selection-start="618" selection-end="618" vertical-scroll-proportion="-12.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/books_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="23" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chapters/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="210" selection-end="210" vertical-scroll-proportion="-6.0416665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chapters/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="57" selection-start="287" selection-end="287" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/books/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="42" selection-start="345" selection-end="345" vertical-scroll-proportion="-8.125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/books/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="217" selection-end="217" vertical-scroll-proportion="-3.125">
+        <state line="26" column="9" selection-start="691" selection-end="691" vertical-scroll-proportion="-16.25">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/books/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="-3.75">
+        <state line="38" column="1" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/chapters_helper.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130827232205_add_column_to_chapters_title.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="216" selection-end="216" vertical-scroll-proportion="0.28301886">
+        <state line="1" column="42" selection-start="69" selection-end="111" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130828071449_add_column_category_to_books.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="45" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130825151955_devise_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130825152841_create_books.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="31" selection-start="87" selection-end="109" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130828071527_create_category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="8" selection-start="125" selection-end="125" vertical-scroll-proportion="0.07109005">
           <folding />
         </state>
       </provider>

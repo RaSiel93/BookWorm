@@ -10,18 +10,20 @@
       </ul>
     </div>
   <% end %>
-        <div class="field">
-          <%= f.label :Название_главы %>
-          <%= f.text_field :title %>
-        </div>
-        <div class="field">
-          <%= f.label :Номер_главы %>
-          <%= f.number_field :number, :value => get_last_number%>
-        </div>
+    <div class="field">
+      <%= f.label :Название_главы %><br>
+      <%= f.text_field :title, size: "50" %>
+    </div>
+    <div class="field">
+      <%= f.label :Описание %><br>
+      <%= f.text_area :content, size: "50x10" %>
+    </div>
 
-        <div class="field">
-          <%= f.text_area :content %>
-        </div>
+    <div class="field">
+      <%= f.label :Номер_главы %>
+      <%= f.number_field :number, :value => get_last_number%>
+    </div>
+
         <div class="actions">
         <%= f.submit %>
         </div>

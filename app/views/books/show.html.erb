@@ -3,18 +3,18 @@
     <%= notice %>
   </p>
   <div>
-    <div class="shelf">
+    <div class="shelf"  align="center">
     <h1 align="center">
       <%= @book.title %>
     </h1>
     <p>
       <%= @book.description  %>
     </p>
-      <div id="book" align="center">
+      <div id="book">
           <%= link_to 'Редактировать', edit_book_path(@book) %> |
           <%= link_to 'Удалить книгу', @book, method: :delete, data: { confirm: 'Вы уверены?' } %>
       </div>
-      <div class="add_chapter" align="center">
+      <div class="add_chapter">
         <%= button_to 'Добавить главу', chapters_path(book_id: @book) %>
       </div>
     </div>

@@ -21,6 +21,10 @@ body {
     background: rgba(0,0,0,0.6);
 }
 
+.shelf a{
+    font-size:1.2em;
+}
+
 #logo{
     margin: 10px auto;
 }
@@ -43,7 +47,7 @@ body {
     margin: 0;
     padding: 10px;
     border-bottom: 0.4em groove #986520;
-    box-shadow: inset -10px -5px 10px 1px black;
+    /*box-shadow: inset -10px -5px 10px 1px black;*/
 }
 /*#shelf{*/
     /*margin: 0;*/
@@ -52,19 +56,22 @@ body {
     /*box-shadow: inset -2px -2px 10px 2px black;*/
 /*}*/
 
-.book{
-    text-indent: 1.2em;
+.book label, h1{
     color: #e8e8aa;
+}
+
+.book p{
+    text-indent: 1.2em;
 }
 
 .book h1{
     margin: 5px 0;
 }
 
-.textfield {
-    padding: 0 20px;
-    color: #ed9c28;
-}
+/*.textfield {*/
+    /*padding: 0 20px;*/
+    /*color: #ed9c28;*/
+/*}*/
 
 #footer{
     height: 1.6em;

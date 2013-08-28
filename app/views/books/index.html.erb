@@ -2,7 +2,7 @@
     <%= link_to 'Добавить книгу', new_book_path %>
 </div>
 <% @books.each do |book| %>
-    <div id="shelf" class="book shelf">
+    <div id="shelf" class="book shelf text-warning">
         <h1>
           <%= book.title %>
         </h1>
