@@ -1,16 +1,33 @@
-<div id="shelf" class="book">
-    <p id="notice"><%= notice %></p>
-
-  <div id="shelf" class="book" align="center">
-    <h1 >
+<div class="book">
+  <p id="notice">
+    <%= notice %>
+  </p>
+  <div>
+    <div class="shelf">
+    <h1 align="center">
       <%= @book.title %>
     </h1>
-    <h3>
-      Глава
-      <%= @chapter.number %>
-    </h3>
+    <p>
+      <%= @book.description  %>
+    </p>
+      <div id="book" align="center">
+          <%= link_to 'Редактировать', edit_book_path(@book) %> |
+          <%= link_to 'Удалить книгу', @book, method: :delete, data: { confirm: 'Вы уверены?' } %>
+      </div>
+      <div class="add_chapter" align="center">
+        <%= button_to 'Добавить главу', chapters_path(book_id: @book) %>
+      </div>
+    </div>
+    <div>
+      <% @book.chapters.order(:number).each do |chapter| %>
+          <div id="chapters" class="shelf">
+            <h3>Глава <%= chapter.number %>: <%= chapter.title %></h3>
+            <%= link_to 'Открыть главу', chapter %> |
+            <%= link_to 'Редактировать', edit_chapter_path(chapter) %> |
+            <%= link_to 'Удалить', chapter, method: :delete, data: { confirm: 'Вы уверены?' }%>
+          </div>
+      <% end %>
+    </div>
   </div>
-
-    <%= link_to 'Edit', edit_book_path(@book) %> |
-    <%= link_to 'Back', books_path %>
+  <%= link_to 'Назад', books_path %>
 </div>

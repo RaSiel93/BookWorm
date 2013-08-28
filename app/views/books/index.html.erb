@@ -1,8 +1,8 @@
-<div id="shelf" align="center">
+<div class="shelf" align="center">
     <%= link_to 'Добавить книгу', new_book_path %>
 </div>
 <% @books.each do |book| %>
-    <div id="shelf" class="book">
+    <div id="shelf" class="book shelf">
         <h1>
           <%= book.title %>
         </h1>
@@ -10,9 +10,7 @@
           <%= book.description  %>
         </p>
         <div>
-          <%= link_to 'Читать', book %> |
-          <%= link_to 'Изменить', edit_book_path(book) %> |
-          <%= link_to 'Удалить', book, method: :delete, data: { confirm: 'Вы уверены?' } %>
+          <%= link_to 'Открыть', book %>
         </div>
     </div>
 <% end %>

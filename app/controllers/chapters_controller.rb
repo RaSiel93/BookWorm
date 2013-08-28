@@ -1,6 +1,7 @@
 class ChaptersController < ApplicationController
   before_action :set_chapter, only: [:show, :edit, :update, :destroy]
 
+
   # GET /chapters
   # GET /chapters.json
   def index
@@ -24,11 +25,11 @@ class ChaptersController < ApplicationController
   # POST /chapters
   # POST /chapters.json
   def create
-    @chapter = Chapter.new(chapter_params)
-
+    @chapter = Chapter.new
+    @chapter.book_id = params[:book_id]
     respond_to do |format|
       if @chapter.save
-        format.html { redirect_to @chapter, notice: 'Chapter was successfully created.' }
+        format.html { redirect_to edit_chapter_path(@chapter), notice: 'Chapter was successfully created.' }
         format.json { render action: 'show', status: :created, location: @chapter }
       else
         format.html { render action: 'new' }
@@ -56,7 +57,7 @@ class ChaptersController < ApplicationController
   def destroy
     @chapter.destroy
     respond_to do |format|
-      format.html { redirect_to chapters_url }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end
@@ -69,6 +70,6 @@ class ChaptersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chapter_params
-      params[:chapter]
+      params.require(:chapter).permit(:title, :content, :number)
     end
 end

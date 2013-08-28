@@ -52,6 +52,7 @@
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
       <column name="book_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="rails_admin_histories" schema="" catalog="bookworm_development" type="TABLE">

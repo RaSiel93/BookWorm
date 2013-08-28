@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
+  #before_action :set_chapter, only: [:show]
 
   # GET /books
   # GET /books.json
@@ -10,7 +11,6 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
-    @chapter = Chapters.find(params)
   end
 
   # GET /books/new
@@ -69,6 +69,10 @@ class BooksController < ApplicationController
     def set_book
       @book = Book.find(params[:id])
     end
+
+    #def set_chapter
+    #  @chapter = Chapter.find(params[:id])
+    #end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
