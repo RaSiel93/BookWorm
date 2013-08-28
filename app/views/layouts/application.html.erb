@@ -73,41 +73,39 @@
     </div>
   </div>
   <div class="col-lg-12">
-    <div class="col-lg-1">
+    <div class="col-lg-1 black">
+
+      <li class="nav-header  text-warning">
+        Категории
+      </li>
       <ul class="nav nav-stacked nav-pills">
-        <li class="nav-header ">
-          Категории
-        </li>
-        <li class="active">
-          <a href="#">Home</a>
-        </li>
+      <% Category.all.each do |f| %>
         <li>
-          <a href="#">Library</a>
+            <a href=<%= f.id %>><%= f.title %></a>
         </li>
-        <li>
-          <a href="#">Applications</a>
-        </li>
+      <% end %>
       </ul>
+
+
     </div>
     <div id="bookshelf"class="col-lg-10" >
         <%= yield %>
     </div>
-    <div class="col-lg-1">
-      <ul class="nav nav-stacked nav-pills">
-        <li class="nav-header ">
-          Категории
-        </li>
-        <li class="active">
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Library</a>
-        </li>
-        <li>
-          <a href="#">Applications</a>
-        </li>
+    <div class="col-lg-1 black">
+
+      <li class="nav-header  text-warning" style="text-decoration: none">
+        Тэги
+      </li>
+      <ul class="nav nav-stacked nav-pills ">
+        <% Category.all.each do |f| %>
+            <li>
+              <a href=<%= f.id %>><%= f.title %></a>
+            </li>
+        <% end %>
       </ul>
-    </div>
+      </div>
+
+
   </div>
   <div id="footer" class="col-lg-12 row-fluid ">
       <p>&copy; Александр Поплавский</p>

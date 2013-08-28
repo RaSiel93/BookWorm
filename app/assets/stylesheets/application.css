@@ -49,6 +49,12 @@ body {
     border-bottom: 0.4em groove #986520;
     /*box-shadow: inset -10px -5px 10px 1px black;*/
 }
+.shelf li{
+    margin: 0;
+    padding: 0;
+    border-bottom: 0.4em groove #986520;
+    /*box-shadow: inset -10px -5px 10px 1px black;*/
+}
 /*#shelf{*/
     /*margin: 0;*/
     /*padding: 10px;*/
@@ -97,4 +103,9 @@ shelf  {
 
 .add_chapter {
     margin: 10px 0;
+}
+
+.black {
+    background: rgba(0,0,0,0.6);
+    border-bottom: 0.4em groove #986520;
 }
