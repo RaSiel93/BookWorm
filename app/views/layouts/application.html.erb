@@ -81,12 +81,10 @@
       <ul class="nav nav-stacked nav-pills">
       <% Category.all.each do |f| %>
         <li>
-            <a href=<%= f.id %>><%= f.title %></a>
+          <%= link_to f.title, category_path(f.id) %>
         </li>
       <% end %>
       </ul>
-
-
     </div>
     <div id="bookshelf"class="col-lg-10" >
         <%= yield %>

@@ -12,4 +12,8 @@ module ApplicationHelper
     }
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end
+  def category_filter(id)
+    #redirects_to Book.where(category_id: id)
+    redirect_to @book
+  end
 end

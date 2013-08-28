@@ -1,12 +1,16 @@
 Bookworm::Application.routes.draw do
 
   resources :chapters
+  #resources :categories
 
   resources :people
 
   resources :books
 
   root 'books#index'
+
+  get 'categories/:id' => 'books#index'
+  #get 'tags/:tag', to: 'home#index', as: :tag
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
