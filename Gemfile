@@ -46,5 +46,7 @@ end
 
 gem 'rails_admin'
 
-
 gem "devise"
+
+gem "redcarpet"
+gem 'markitup-rails'

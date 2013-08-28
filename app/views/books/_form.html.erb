@@ -1,37 +1,37 @@
 <%= form_for(@book) do |f| %>
-    <div align="center">
-      <% if @book.errors.any? %>
-          <div id="error_explanation">
+    <div class="col-md-6" align="center">
+        <% if @book.errors.any? %>
+        <div id="error_explanation">
             <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
-
             <ul>
-              <% @book.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-              <% end %>
+                <% @book.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
             </ul>
-          </div>
-      <% end %>
+        </div>
+        <% end %>
+
+        <div class="field">
+            <%= f.label :Название %><br>
+            <%= f.text_field :title, size: "50" %>
+        </div>
+        <div class="field">
+            <%= f.label :Тэги %><br>
+            <%= f.text_field :title, size: "50" %>
+        </div>
+        <div class="field">
+            <%= f.label :Категория %><br>
+            <%= f.collection_select :category_id, Category.all, :id, :title%>
+        </div>
+        <br>
+        <div class="actions">
+            <%= f.submit "Применить изменения"%>
+        </div>
     </div>
-    <div>
-      <div style="float:left; margin:0 3em">
-        <div class="field" >
-          <%= f.label :Название %><br>
-          <%= f.text_field :title, size: "51" %>
-        </div>
+    <div class="col-md-6" align="center">
         <div class="field">
-          <%= f.label :Категория %><br>
+            <%= f.label :Описание %><br>
+            <%= f.text_area :description, size: "50x10" %>
         </div>
-        <div class="field">
-          <%= f.label :Тэги %><br>
-          <%= f.text_field :title, size: "51" %>
-        </div>
-        <div class="actions" style="margin:1.5em 0">
-          <%= f.submit "Создать книгу"%>
-        </div>
-      </div>
-      <div class="field" style="float:left; margin:0 30px">
-        <%= f.label :Описание %><br>
-        <%= f.text_area :description, size: "50x10" %>
-      </div>
     </div>
 <% end %>

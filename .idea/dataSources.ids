@@ -7,7 +7,6 @@
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
     <jdbc-url>jdbc:mysql://localhost:3306/bookworm_development</jdbc-url>
     <user-name>root</user-name>
-    <user-password>df99df9bdf9cdf98df9fdf9c</user-password>
     <default-dialect>MySQL</default-dialect>
     <libraries>
       <library>
@@ -35,7 +34,6 @@
     <schema name="" catalog="information_schema"/>
     <schema name="" catalog="mysql"/>
     <schema name="" catalog="performance_schema"/>
-    <schema name="" catalog="phpmyadmin"/>
     <schema name="" catalog="test"/>
     <table name="books" schema="" catalog="bookworm_development" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -1094,113 +1092,6 @@
       <column name="THREAD_ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="PROCESSLIST_ID" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="NAME" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12"/>
-    </table>
-    <table name="pma_bookmark" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="dbase" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="user" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="label" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="query" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <primary-key name="PRIMARY" columns="id"/>
-    </table>
-    <table name="pma_column_info" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="db_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="table_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="column_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="comment" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="mimetype" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="transformation" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="transformation_options" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="db_name" unique="true" columns="db_name,table_name,column_name"/>
-    </table>
-    <table name="pma_designer_coords" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="db_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="table_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="x" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="y" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
-      <column name="v" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
-      <column name="h" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
-      <primary-key name="PRIMARY" columns="db_name,table_name"/>
-    </table>
-    <table name="pma_history" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="id" sqlType="BIGINT UNSIGNED" length="20" precision="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="username" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="db" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="table" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="timevalue" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
-      <column name="sqlquery" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="username" unique="false" columns="username,db,table,timevalue"/>
-    </table>
-    <table name="pma_pdf_pages" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="db_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="page_nr" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="page_descr" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <primary-key name="PRIMARY" columns="page_nr"/>
-      <index name="db_name" unique="false" columns="db_name"/>
-    </table>
-    <table name="pma_recent" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="username" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
-      <column name="tables" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <primary-key name="PRIMARY" columns="username"/>
-    </table>
-    <table name="pma_relation" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="master_db" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="master_table" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="master_field" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="foreign_db" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="foreign_table" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="foreign_field" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <primary-key name="PRIMARY" columns="master_db,master_table,master_field"/>
-      <index name="foreign_field" unique="false" columns="foreign_db,foreign_table"/>
-    </table>
-    <table name="pma_table_coords" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="db_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="table_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="pdf_page_number" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="x" sqlType="FLOAT UNSIGNED" length="12" precision="0" nullable="false" jdbcType="7" def="MA=="/>
-      <column name="y" sqlType="FLOAT UNSIGNED" length="12" precision="0" nullable="false" jdbcType="7" def="MA=="/>
-      <primary-key name="PRIMARY" columns="db_name,table_name,pdf_page_number"/>
-    </table>
-    <table name="pma_table_info" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="db_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="table_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="display_field" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
-      <primary-key name="PRIMARY" columns="db_name,table_name"/>
-    </table>
-    <table name="pma_table_uiprefs" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="username" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
-      <column name="db_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
-      <column name="table_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
-      <column name="prefs" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <column name="last_update" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
-      <primary-key name="PRIMARY" columns="username,db_name,table_name"/>
-    </table>
-    <table name="pma_tracking" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="db_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
-      <column name="table_name" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
-      <column name="version" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="date_created" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="date_updated" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
-      <column name="schema_snapshot" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <column name="schema_sql" sqlType="TEXT" length="65535" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="data_sql" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="true" jdbcType="-1"/>
-      <column name="tracking" sqlType="SET" length="188" precision="0" nullable="true" jdbcType="1"/>
-      <column name="tracking_active" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" def="MQ=="/>
-      <primary-key name="PRIMARY" columns="db_name,table_name,version"/>
-    </table>
-    <table name="pma_userconfig" schema="" catalog="phpmyadmin" type="TABLE">
-      <column name="username" sqlType="VARCHAR" length="64" precision="0" nullable="false" jdbcType="12"/>
-      <column name="timevalue" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
-      <column name="config_data" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
-      <primary-key name="PRIMARY" columns="username"/>
-    </table>
-    <table name="employee" schema="" catalog="test" type="TABLE">
-      <column name="Name" sqlType="CHAR" length="20" precision="0" nullable="true" jdbcType="1"/>
-      <column name="Dept" sqlType="CHAR" length="20" precision="0" nullable="true" jdbcType="1"/>
-      <column name="jobTitle" sqlType="CHAR" length="20" precision="0" nullable="true" jdbcType="1"/>
     </table>
   </data-source>
 </component>

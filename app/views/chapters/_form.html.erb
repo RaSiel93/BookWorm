@@ -1,31 +1,33 @@
-<%= form_for @chapter do |f| %>
+<%= form_for(@chapter) do |f| %>
+  <div class="col-md-6" align="center">
   <% if @chapter.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@chapter.errors.count, "error") %> prohibited this chapter from being saved:</h2>
-
-      <ul>
-      <% @chapter.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+      <div id="error_explanation">
+        <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+        <ul>
+          <% @chapter.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
   <% end %>
-    <div class="field">
-      <%= f.label :Название_главы %><br>
-      <%= f.text_field :title, size: "50" %>
-    </div>
-    <div class="field">
-      <%= f.label :Описание %><br>
-      <%= f.text_area :content, size: "50x10" %>
-    </div>
 
-    <div class="field">
-      <%= f.label :Номер_главы %>
-      <%= f.number_field :number, :value => get_last_number%>
-    </div>
-
-        <div class="actions">
-        <%= f.submit %>
-        </div>
-
+  <div class="field">
+    <%= f.label :Название %><br>
+    <%= f.text_field :title, size: "50" %>
+  </div>
+  <div class="field">
+    <%= f.label :Номер_главы %><br>
+    <%= f.number_field :number, :value => get_last_number%>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Применить изменения"%>
+  </div>
+</div>
+<div class="col-md-6" align="center">
+  <div class="field">
+    <%= f.label :Содержание %><br>
+    <%= f.text_area :content, size: "50x10" %>
+  </div>
+</div>
 <% end %>

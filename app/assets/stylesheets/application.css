@@ -29,17 +29,10 @@ body {
     margin: 10px auto;
 }
 
-#right_panel{
-    /*width: 200px;*/
-}
-
-
-
 #bookshelf{
     padding: 0;
     border-left: 0.6em groove #785520;
     border-right: 0.6em groove #785520;
-    /*box-shadow: inset 5px -10px 10px 6px black;*/
     background-image:url(tree4.jpg) ;
 }
 
@@ -47,37 +40,26 @@ body {
     margin: 0;
     padding: 10px;
     border-bottom: 0.4em groove #986520;
-    /*box-shadow: inset -10px -5px 10px 1px black;*/
+    box-shadow: inset -10px -5px 10px 1px black;
 }
 .shelf li{
     margin: 0;
     padding: 0;
     border-bottom: 0.4em groove #986520;
-    /*box-shadow: inset -10px -5px 10px 1px black;*/
+    box-shadow: inset -10px -5px 10px 1px black;
 }
-/*#shelf{*/
-    /*margin: 0;*/
-    /*padding: 10px;*/
-    /*border-bottom: 0.4em groove #986520;*/
-    /*box-shadow: inset -2px -2px 10px 2px black;*/
-/*}*/
 
 .book label, h1{
     color: #e8e8aa;
 }
 
-.book p{
+.booktext{
     text-indent: 1.2em;
 }
 
 .book h1{
     margin: 5px 0;
 }
-
-/*.textfield {*/
-    /*padding: 0 20px;*/
-    /*color: #ed9c28;*/
-/*}*/
 
 #footer{
     height: 1.6em;
@@ -108,4 +90,12 @@ shelf  {
 .black {
     background: rgba(0,0,0,0.6);
     border-bottom: 0.4em groove #986520;
+}
+
+.col-md-6 label{
+    color:#fff;
+}
+
+#add_book a{
+    color: #fff;
 }
