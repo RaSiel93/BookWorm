@@ -5,10 +5,13 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    if params[:id]
+    if params[:tag]
+      @books = Book.tagged_with(params[:tag])
+    else if params[:id]
       @books = Book.where :category_id => params[:id]
     else
       @books = Book.all
+    end
     end
   end
 
@@ -81,6 +84,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:title, :description, :category_id)
+      params.require(:book).permit(:title, :description, :category_id, :tag_list)
     end
 end

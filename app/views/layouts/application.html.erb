@@ -95,12 +95,13 @@
         Тэги
       </li>
       <ul class="nav nav-stacked nav-pills ">
-        <% Category.all.each do |f| %>
-            <li>
-              <a href=<%= f.id %>><%= f.title %></a>
-            </li>
-        <% end %>
+        <div id="tag_cloud">
+            <% tag_cloud Book.tag_counts, %w{s m l} do |tag, css_class| %>
+                <%= link_to tag.name, tag_path(u tag.name), class: css_class %>
+            <% end %>
+        </div>
       </ul>
+
       </div>
 
 

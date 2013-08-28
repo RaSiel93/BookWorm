@@ -5,7 +5,7 @@
     <% @books.each do |book| %>
         <div class="shelf booktext text-warning">
             <h1>
-              <%= book.title %>
+              <%= link_to book.title, book %>
             </h1>
             <p>
               <%= book.description  %>

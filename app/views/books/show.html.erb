@@ -16,6 +16,9 @@
             <%= link_to 'Удалить книгу', @book, method: :delete, data: { confirm: 'Вы уверены?' }, remote:true %> |
             <%= link_to 'Назад', books_path %>
           </div>
+          <div>
+            <%= @book.tag_list %>
+          </div>
     </div>
     <div>
       <% @book.chapters.order(:number).each do |chapter| %>

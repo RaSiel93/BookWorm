@@ -9,4 +9,6 @@ class Book < ActiveRecord::Base
 
   has_many :chapters, dependent: :destroy
   has_one :category
+
+  acts_as_taggable
 end
