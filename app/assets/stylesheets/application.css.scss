@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require markitup/skins/markitup/style
+ *= require markitup/sets/markdown/style
+ *= require select2
+ */
+
+#tag_cloud {
+  width: 230px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
+
+
+body {
+  background-image: url(background.jpg);
+  padding: 0;
+}
+
+#main_panel{
+  height: 3.2em;
+  background: rgba(0,0,0,0.6);
+}
+
+.shelf a{
+  font-size:1.2em;
+}
+
+#logo{
+  margin: 10px auto;
+}
+
+#bookshelf{
+  padding: 0;
+  border-left: 0.6em groove #785520;
+  border-right: 0.6em groove #785520;
+  background-image:url(tree4.jpg) ;
+}
+
+.shelf{
+  margin: 0;
+  padding: 10px;
+  border-bottom: 0.4em groove #986520;
+  box-shadow: inset -10px -5px 10px 1px black;
+}
+.shelf li{
+  margin: 0;
+  padding: 0;
+  border-bottom: 0.4em groove #986520;
+  box-shadow: inset -10px -5px 10px 1px black;
+}
+
+.book label, h1{
+  color: #e8e8aa;
+}
+
+.booktext{
+  text-indent: 1.2em;
+}
+
+.book h1{
+  margin: 5px 0;
+}
+
+#footer{
+  height: 1.6em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+#chapters h3{
+  padding: 0;
+  margin: 0;
+}
+
+#chapters{
+  text-align: center;
+}
+
+shelf  {
+  margin: 10px;
+  padding: 10px;
+}
+
+.add_chapter {
+  margin: 10px 0;
+}
+
+.black {
+  background: rgba(0,0,0,0.6);
+  border-bottom: 0.4em groove #986520;
+}
+
+.col-md-6 label{
+  color:#fff;
+}
+
+#add_book a{
+  color: #fff;
+}
