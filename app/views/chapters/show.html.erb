@@ -6,5 +6,6 @@
 
 
   <h1>Глава <%= @chapter.number %>: <%= @chapter.title %> </h1>
-  <p><%= @chapter.content %></p>
+
+  <% p= markdown(@chapter.content )  %>
 </div>

@@ -13,8 +13,6 @@ Bookworm::Application.routes.draw do
 
   get 'tags/:tag', to: 'books#index', as: :tag
 
-  devise_for :users
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   #match ':controller(/:action(/:id(.:format)))'
   # The priority is based upon order of creation: first created -> highest priority.

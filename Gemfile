@@ -22,7 +22,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -44,11 +44,19 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'rails_admin'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
-gem "devise"
+gem 'thinking-sphinx', '3.0.5'
 
-gem "redcarpet"
+gem 'devise'
+gem "cancan"
+gem 'acts-as-taggable-on'
+
+gem 'will_paginate'
+
+gem 'redcarpet'
 gem 'markitup-rails'
 
-gem 'acts-as-taggable-on'
+gem "select2-rails"

@@ -13,12 +13,18 @@
 
         <div class="field">
             <%= f.label :Название %><br>
-            <%= f.text_field :title, size: "50" %>
+            <%= f.text_field :title, size: "40" %>
         </div>
-        <div class="field">
-            <%= f.label :Тэги %><br>
-            <%= f.text_field :tag_list, size: "50" %>
+
+
+        <div class="control-group">
+          <%= f.label :tag_list, "Tags (separated by commas)" %>
+          <div class="controls" class="select2-container select2-container-multi" >
+            <%= f.text_field :tag_list, data: {autocomplete_source: Book.tag_counts.map(&:name)} %>
+          </div>
         </div>
+
+
         <div class="field">
             <%= f.label :Категория %><br>
             <%= f.collection_select :category_id, Category.all, :id, :title%>
@@ -31,7 +37,7 @@
     <div class="col-md-6" align="center">
         <div class="field">
             <%= f.label :Описание %><br>
-            <%= f.text_area :description, size: "50x10" %>
+            <%= f.text_area :description, size: "40x10" %>
         </div>
     </div>
 <% end %>

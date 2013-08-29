@@ -5,13 +5,14 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    if params[:tag]
+    if params[:search]
+      @books = Book.search(params[:search])
+    elsif params[:tag]
       @books = Book.tagged_with(params[:tag])
-    else if params[:id]
+    elsif params[:id]
       @books = Book.where :category_id => params[:id]
     else
       @books = Book.all
-    end
     end
   end
 
@@ -66,8 +67,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     respond_to do |format|
-      format.html { redirect_to store_url }
-      format.js { @current_book = @book }
+      format.html { redirect_to book_path }
       format.json { head :no_content }
     end
   end
