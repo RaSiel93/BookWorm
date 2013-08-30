@@ -7,6 +7,20 @@
   <title><%= content_for?(:title) ? yield(:title) : "BookWorm" %></title>
   <%= csrf_meta_tag %>
 
+
+  <!-- Fav and touch icons -->
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "jquery-1.10.2.min", "jqcloud-1.0.4.min", "bootstrap.min" %>
+  <%= stylesheet_link_tag "bootstrap.min", "bootstrap-theme", "jqcloud" %>
+
+  <script type="text/javascript">
+
+      $(function () {
+          $("#example").attr('style','height:<%= get_tag_count * get_tag_size_render %>px');
+          $("#example").jQCloud(<%= get_tag_array %>);
+      });
+  </script>
+
   <%= stylesheet_link_tag "application", :media => "all" %>
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
@@ -18,20 +32,6 @@
 </head>
 
 <body>
-<div class="row">
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-  <div class="col-md-1">.col-md-1</div>
-</div>
 <div id="main_panel">
     <div id="authentication" class="col-md-3">
         <button type="button" class="btn btn-success navbar-btn input-sm"  value="btn btn-primary">Войти</button>
@@ -60,10 +60,8 @@
         </div>
     </div>
 </div>
-<div class="col-lg-12">
 <div id="logo" align="center">
   <a class="btn btn-link" href=<%=books_path%>><img src="http://localhost:3000/assets/logo.png"></a>
-</div>
 </div>
 <div class="">
 <div class="col-lg-2 black">
@@ -79,7 +77,7 @@
   <% end %>
   </ul>
 </div>
-<div id="bookshelf"class="col-lg-8" >
+<div id="bookshelf" class="col-lg-8" >
     <%= yield %>
 </div>
 <div class="col-lg-2 black">
@@ -89,13 +87,12 @@
   </li>
   <ul class="nav nav-stacked nav-pills ">
     <div id="tag_cloud">
-        <% tag_cloud Book.tag_counts, %w{s m l} do |tag, css_class| %>
-            <%= link_to tag.name, tag_path(u tag.name), class: css_class %>
-        <% end %>
+        <div id="example"></div>
     </div>
   </ul>
+</div>
 
-  </div>
+
 
 
 </div>
