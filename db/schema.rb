@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130828203446) do
+ActiveRecord::Schema.define(version: 20130830180916) do
+
+  create_table "admin_users", force: true do |t|
+    t.string   "first_name",      default: "",    null: false
+    t.string   "last_name",       default: "",    null: false
+    t.string   "role",                            null: false
+    t.string   "email",                           null: false
+    t.boolean  "status",          default: false
+    t.string   "token",                           null: false
+    t.string   "password_digest",                 null: false
+    t.string   "preferences"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
 
   create_table "books", force: true do |t|
     t.string   "title"

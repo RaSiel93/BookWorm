@@ -60,3 +60,5 @@ gem 'redcarpet'
 gem 'markitup-rails'
 
 gem "select2-rails"
+
+gem "typus", :git => "git://github.com/fesplugas/typus.git"
