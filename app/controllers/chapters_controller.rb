@@ -1,7 +1,7 @@
 class ChaptersController < ApplicationController
   before_action :set_chapter, only: [:show, :edit, :update, :destroy]
   before_filter :load_book
-
+  before_filter :authenticate_user!, :except => [:show]
   # GET /chapters
   # GET /chapters.json
   def index

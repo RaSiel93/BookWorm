@@ -7,13 +7,20 @@
     <% @books.each do |book| %>
         <div class="shelf booktext text-warning">
             <h1>
-              <%= link_to book.title, book %>
+                <%= link_to book.title, book %>
             </h1>
             <p>
-              <%= markdown(book.description)  %>
+                <%= markdown(book.description)  %>
             </p>
             <div>
-              <%= link_to 'Читать', book %>
+                <p>метки: -
+                    <%book.tag_list.each do |tag|  %>
+                        <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b> -
+                    <%end%>
+                </p>
+            </div>
+            <div>
+                <%= link_to 'Читать', book %>
             </div>
         </div>
     <% end %>
