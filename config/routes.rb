@@ -1,11 +1,14 @@
 Bookworm::Application.routes.draw do
 
-  resources :chapters
-  #resources :categories
+
 
   resources :people
 
-  resources :books
+  resources :books do
+    resources :chapters
+  end
+
+  post "markitup/preview"
 
   root 'books#index'
 

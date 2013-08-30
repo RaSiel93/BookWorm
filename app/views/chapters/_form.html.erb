@@ -1,4 +1,4 @@
-<%= form_for(@chapter) do |f| %>
+<%= form_for([@book, @chapter]) do |f| %>
     <div class="col-md-3">
         <% if @chapter.errors.any? %>
           <div id="error_explanation">

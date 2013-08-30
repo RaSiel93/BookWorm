@@ -1,21 +1,22 @@
 class ChaptersController < ApplicationController
   before_action :set_chapter, only: [:show, :edit, :update, :destroy]
-
+  before_filter :load_book
 
   # GET /chapters
   # GET /chapters.json
   def index
-    @chapters = Chapter.all
+    @chapters = @book.chapters.all
   end
 
   # GET /chapters/1
   # GET /chapters/1.json
   def show
+    @chapter = @book.chapters.where(:id => params[:id]).first
   end
 
   # GET /chapters/new
   def new
-    @chapter = Chapter.new
+    @chapter = @book.chapters.new
   end
 
   # GET /chapters/1/edit
@@ -25,7 +26,7 @@ class ChaptersController < ApplicationController
   # POST /chapters
   # POST /chapters.json
   def create
-    @chapter = Chapter.new(chapter_params)
+    @chapter = @book.chapters.new(chapter_params)
     respond_to do |format|
       if @chapter.save
         format.html { redirect_to chapter_path(@chapter), notice: 'Chapter was successfully created.' }
@@ -72,4 +73,8 @@ class ChaptersController < ApplicationController
     def chapter_params
       params.require(:chapter).permit(:title, :content, :number, :book_id)
     end
+
+  def load_book
+    @book = Book.find(params[:book_id])
+  end
 end

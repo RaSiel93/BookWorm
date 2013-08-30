@@ -1,11 +1,11 @@
 <div class="book shelf">
   <p id="notice"><%= notice %></p>
 
-<%= link_to 'Редактировать', edit_chapter_path(@chapter) %> |
-<%= link_to 'К оглавлению', Book.find(@chapter.book_id) %>
+<%= link_to 'Редактировать', edit_book_chapter_path(@book, @chapter) %> |
+<%= link_to 'К оглавлению', book_chapter_path(@book, @chapter) %>
 
 
   <h1>Глава <%= @chapter.number %>: <%= @chapter.title %> </h1>
 
-  <% p= markdown(@chapter.content )  %>
+  <%= markdown(@chapter.content)%>
 </div>
