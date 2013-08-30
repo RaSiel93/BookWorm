@@ -9,7 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  *= require markitup/skins/markitup/style
  *= require markitup/sets/markdown/style
  *= require select2
@@ -90,10 +89,6 @@ shelf  {
   border-bottom: 0.4em groove #986520;
 }
 
-.black {
-  background: rgba(0,0,0,0.6);
-}
-
 .col-md-6 label{
   color:#fff;
 }
@@ -103,4 +98,18 @@ shelf  {
 }
 
 #example{
+}
+
+#panel_tags {
+  position: fixed;
+  right: 0;
+}
+
+#authentication form{
+  float: left;
+  margin: 0 5px;
+}
+
+.style_theme{
+  width: 10em;
 }

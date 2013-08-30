@@ -11,9 +11,11 @@
           <%= markdown(@book.description)  %>
         </p>
           <div id="book">
-            <%= link_to 'Добавить главу', new_book_chapter_path(book_id: @book.id) %> |
-            <%= link_to 'Редактировать', edit_book_path(@book) %> |
-            <%= link_to 'Удалить книгу', @book, method: :delete, data: { confirm: 'Вы уверены?' }, remote:true %> |
+            <% if user_signed_in? %>
+                <%= link_to 'Добавить главу', new_book_chapter_path(book_id: @book.id) %> |
+                <%= link_to 'Редактировать', edit_book_path(@book) %> |
+                <%= link_to 'Удалить книгу', @book, method: :delete, data: { confirm: 'Вы уверены?' }, remote:true %> |
+            <% end %>
             <%= link_to 'Назад', books_path %>
           </div>
           <div>
@@ -24,9 +26,11 @@
       <% @book.chapters.order(:number).each do |chapter| %>
           <div id="chapters" class="shelf ">
             <h3>Глава <%= chapter.number %>: <%= chapter.title %></h3>
-            <%= link_to 'Открыть главу', book_chapter_path(@book, chapter) %> |
-            <%= link_to 'Редактировать', edit_book_chapter_path(@book, chapter) %> |
-            <%= link_to 'Удалить', [@book, chapter], method: :delete, data: { confirm: 'Вы уверены?' }%>
+            <%= link_to 'Открыть главу', book_chapter_path(@book, chapter) %>
+            <% if user_signed_in? %>
+                | <%= link_to 'Редактировать', edit_book_chapter_path(@book, chapter) %> |
+                <%= link_to 'Удалить', [@book, chapter], method: :delete, data: { confirm: 'Вы уверены?' }%>
+            <% end %>
           </div>
       <% end %>
     </div>

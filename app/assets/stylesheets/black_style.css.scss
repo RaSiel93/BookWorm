@@ -1,6 +1,11 @@
 body {
   background-image: url(background.jpg);
+  background-attachment:fixed;
 }
 #bookshelf{
   background-image:url(tree4.jpg) ;
 }
+.black {
+  background: rgba(0,0,0,0.8);
+}
+

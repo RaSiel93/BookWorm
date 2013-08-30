@@ -29,7 +29,7 @@ class ChaptersController < ApplicationController
     @chapter = @book.chapters.new(chapter_params)
     respond_to do |format|
       if @chapter.save
-        format.html { redirect_to chapter_path(@chapter), notice: 'Chapter was successfully created.' }
+        format.html { redirect_to [@book,@chapter], notice: 'Chapter was successfully created.' }
         format.json { render action: 'show', status: :created, location: @chapter }
       else
         format.html { render action: 'new' }
@@ -41,13 +41,14 @@ class ChaptersController < ApplicationController
   # PATCH/PUT /chapters/1
   # PATCH/PUT /chapters/1.json
   def update
+    @chapter = @book.chapters.where(:id => params[:id]).first
     respond_to do |format|
       if @chapter.update(chapter_params)
-        format.html { redirect_to @chapter, notice: 'Chapter was successfully updated.' }
+        format.html { redirect_to [@book, @chapter], notice: 'Chapter was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @chapter.errors, status: :unprocessable_entity }
+        format.json { render json: @book.chapter.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -55,10 +56,11 @@ class ChaptersController < ApplicationController
   # DELETE /chapters/1
   # DELETE /chapters/1.json
   def destroy
+    @chapter = @book.chapters.where(:id => params[:id]).first
     @chapter.destroy
     respond_to do |format|
       format.html { redirect_to :back }
-      format.js { @current_chapter = @chapter }
+      format.js { @current_chapter = @book.chapter }
       format.json { head :no_content }
     end
   end

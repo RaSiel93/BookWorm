@@ -9,33 +9,42 @@
 
 
   <!-- Fav and touch icons -->
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "jquery-1.10.2.min", "jqcloud-1.0.4.min", "bootstrap.min" %>
-  <%= stylesheet_link_tag "bootstrap.min", "bootstrap-theme", "jqcloud" %>
+  <%= javascript_include_tag "application", "jquery-1.10.2.min", "jqcloud-1.0.4.min", "bootstrap.min" %>
+  <%= stylesheet_link_tag "bootstrap.min",  "bootstrap-theme", "jqcloud", "application", media: "all", "data-turbolinks-track" => true %>
+
+  <% if cookies[:style] == 'black' %>
+    <%= stylesheet_link_tag "black_style" %>
+  <% else %>
+    <%= stylesheet_link_tag "white_style" %>
+  <% end %>
 
   <script type="text/javascript">
 
+
       $(function () {
-          $("#example").attr('style','height:<%= get_tag_count * get_tag_size_render %>px');
+          $("#example").attr('style','height:<%= get_tag_size_render %>px');
           $("#example").jQCloud(<%= get_tag_array %>);
       });
   </script>
 
-  <%= stylesheet_link_tag "application", :media => "all" %>
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <%= javascript_include_tag "application" %>
 </head>
 
 <body>
 <div id="main_panel">
-    <div id="authentication" class="col-md-3">
-        <button type="button" class="btn btn-success navbar-btn input-sm"  value="btn btn-primary">Войти</button>
-        <button type="button" class="btn btn-success navbar-btn input-sm" value="btn btn-primary">Зарегистрироваться</button>
+    <div id='authentication' class="col-md-3">
+        <% if user_signed_in? %>
+            <%= button_to 'Профиль пользователя', destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= button_to 'Выйти', destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
+        <% else %>
+            <%= button_to 'Зарегистрироваться', user_registration_path, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= button_to 'Войти', user_session_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
+        <% end %>
     </div>
     <div class="col-md-6">
         <form class="navbar-form navbar-right " role="search">
@@ -49,9 +58,12 @@
         <div class="col-lg-6">
             <button type="button" class="btn navbar-btn input-sm"  value="white_style">Английский язык</button>
         </div>
-        <div class="col-lg-6">
-            <button type="button" class="btn btn-inverse navbar-btn input-sm"  value="black">Темный стиль</button>
-            <button type="button" class="btn navbar-btn input-sm"  value="white" display=hide >Светлый стиль</button>
+        <div id="style_theme" class="col-lg-6">
+            <% if cookies[:style] == 'black' %>
+              <%= button_to 'Светлый стиль', books_index_switch_theme_path, :class => 'btn btn-inverse navbar-btn input-sm style_theme' %>
+            <% else %>
+              <%= button_to 'Темный стиль', books_index_switch_theme_path, :class => 'btn btn-success navbar-btn input-sm style_theme' %>
+            <% end %>
         </div>
     </div>
 </div>
@@ -75,20 +87,80 @@
 <div id="bookshelf" class="col-lg-8" >
     <%= yield %>
 </div>
-<div class="col-lg-2 black">
+<div id="panel_tags" class="col-lg-2 black">
 
   <li class="nav-header  text-warning" style="text-decoration: none">
     Тэги
   </li>
   <ul class="nav nav-stacked nav-pills ">
     <div id="tag_cloud">
-        <div id="example"></div>
+
+      <div align="center">
+
+
+        <!--Ставить туда где хотите видеть облако-->
+
+        <div id="yoblako" align=center><noindex>
+
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+          <a style="font-size:8pt;" href="ССЫЛКА" rel="nofollow" class="eTag eTagGr8">НАЗВАНИЕ</a>
+
+        </noindex></div>
+
+
+        <script type="text/javascript" src="http://neotech.3dn.ru/Tegs/swfobject.js"></script>
+        <script type="text/javascript">
+            var flashvars = {};
+            flashvars.mode = 'tags';
+            flashvars.minFontSize = '8';  /* минимальный размер  шрифта в облаке. Размер задается в пунктах.*/
+            flashvars.maxFontSize = '12';  /* максимальный размер  шрифта в облаке. Размер задается в пунктах.*/
+            flashvars.tcolor = '0x006600';  /*"0x006600" - цвет самого частого текста в облаке тегов в RGB формате. Частота текста определяется по свойству ссылки style. 0x не меняем.*/
+            flashvars.tcolor2 = '0x006600'; /* "0x006600" - цвет самого редкого текста в облаке тегов в RGB формате. Частота текста определяется по свойству ссылки style. 0x не меняем.*/
+            flashvars.hicolor = '0xFF0000';   /*"0xFF0000" - цвет текста при наведении на него курсора. 0x не меняем.*/
+            flashvars.distr = 'true';   /*тип вращения облака, может принимать значение "true" или "false"*/
+            flashvars.tspeed = '100'; /*скорость вращения*/
+            eTagz = document.getElementById('yoblako').getElementsByTagName('A');
+            flashvars.tagcloud = '<tags>';
+            for (var i=0; eTagz[i]; ++i) flashvars.tagcloud += '<a href=\'' + eTagz[i].getAttribute('href')
+                    + '\' style=\'' + parseInt(eTagz[i].style.fontSize)
+                    + '\'>' + eTagz[i].innerHTML.replace(/&/i, '%26') + '</a>';
+            delete eTagz;
+            flashvars.tagcloud += '</tags>';
+            var params = {};
+            /*params.wmode = 'transparent';  устанавливаем фон облака прозрачным. Если убрать эту строку, то можно будет самим задавать цвет фона.*/
+            params.bgcolor = '#FFFFCC';
+            params.allowscriptaccess = 'always';
+            var attributes = {};
+            attributes.id = 'yoblako';
+            attributes.name = 'tagcloud';
+            swfobject.embedSWF('http://neotech.3dn.ru/Tegs/tagcloud.swf', 'yoblako', '300', '200', '9.0.0', false, flashvars, params, attributes);          /*"300" - ширина будущего облака тегов в пикселях.
+             "200" - высота будущего облака тегов.
+             "9" - максимальная версия флеш-плеера, которая нужна для отображения облака.*/
+        </script>
+
+
+
+
+      </div>
+
+
     </div>
   </ul>
 </div>
-
-
-
 
 </div>
 <div id="footer" class="col-lg-12 row-fluid ">

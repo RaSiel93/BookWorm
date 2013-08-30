@@ -2,6 +2,7 @@ Bookworm::Application.routes.draw do
 
 
 
+  devise_for :users
   resources :people
 
   resources :books do
@@ -15,6 +16,9 @@ Bookworm::Application.routes.draw do
   get 'categories/:id', to: 'books#index', as: :category
 
   get 'tags/:tag', to: 'books#index', as: :tag
+
+  post 'books/index/switch_theme', to: 'application#switch_theme'
+
 
 
   #match ':controller(/:action(/:id(.:format)))'

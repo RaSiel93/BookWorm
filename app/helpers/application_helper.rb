@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def get_tag_size_render
-    40
+    600
   end
 
   def get_tag_count
@@ -38,5 +38,6 @@ module ApplicationHelper
     end
     raw('[' + tag_array + ']')
   end
+
 
 end

@@ -1,6 +1,8 @@
-<h3 id="add_book" class="shelf" align="center">
-    <%= link_to 'Добавить книгу', new_book_path %>
-</h3>
+<% if user_signed_in? %>
+    <h3 id="add_book" class="shelf" align="center">
+      <%= link_to 'Добавить книгу', new_book_path %>
+    </h3>
+<% end %>
 <div>
     <% @books.each do |book| %>
         <div class="shelf booktext text-warning">
