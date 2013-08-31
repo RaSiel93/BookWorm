@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20130830180916) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
+    t.integer  "user_id"
   end
 
   create_table "categories", force: true do |t|

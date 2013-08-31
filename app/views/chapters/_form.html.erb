@@ -20,7 +20,7 @@
             <%= f.label :Название %><br>
             <%= f.text_field :title, size: "40" %>
         </div>
-        <%= f.hidden_field :number, :value => get_last_number %>
+        <%= f.number_field :number, :value => get_last_number %>
         <%= f.hidden_field :book_id, :value => book_id %>
         <br>
         <div class="actions">

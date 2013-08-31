@@ -24,7 +24,7 @@
           </div>
         </div>
 
-
+        <%= f.hidden_field :user_id, :value => current_user.id %>
         <div class="field">
             <%= f.label :Категория %><br>
             <%= f.collection_select :category_id, Category.all, :id, :title%>

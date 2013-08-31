@@ -17,6 +17,10 @@
               <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b> -
           <%end%>
         </p>
+        <p>
+          Автор:
+          <%= Users.where(:id => @book.user_id).first.email %>
+        </p>
       </div>
           <div id="book">
             <% if user_signed_in? %>
