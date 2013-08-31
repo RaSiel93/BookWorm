@@ -9,11 +9,13 @@ Bookworm::Application.routes.draw do
     resources :chapters
   end
 
-  post "markitup/preview"
-
   root 'books#index'
 
+  post "markitup/preview"
+
   get 'categories/:id', to: 'books#index', as: :category
+
+  get 'pages/:page', to: 'books#index', as: :page
 
   get 'tags/:tag', to: 'books#index', as: :tag
 

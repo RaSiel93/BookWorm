@@ -24,15 +24,45 @@
             </div>
         </div>
     <% end %>
-    <div align="center">
-      <ul class="pagination pagination-sm">
-        <li><a href="#">&laquo;</a></li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
-      </ul>
-    </div>
+
+
+  <div align="center">
+    <ul class="pagination pagination-sm">
+
+      <% if params[:page].to_i == 1 %>
+        <li class="disabled"><a>&laquo;</a></li>
+      <% else %>
+        <li><a href='<%= page_path(params[:page].to_i - 1)%>'>&laquo;</a></li>
+      <% end %>
+
+      <% count_books = (Book.all.size/ get_count_book_in_page.to_f).ceil%>
+      <% count_books.times {|i|%>
+
+        <% if (i + 1) == params[:page].to_i || params[:page] == nil && i == 0 %>
+            <li class="active">
+        <% else %>
+            <li>
+        <% end %>
+          <%= link_to "#{i + 1}", page_path(i + 1) %>
+        </li>
+      <% }%>
+      <% if params[:page].to_i == count_books %>
+          <li class="disabled"><a>&raquo;</a></li>
+      <% else %>
+          <li><a href='<%= page_path(params[:page].to_i + 1) %>'>&raquo;</a></li>
+      <% end %>
+    </ul>
+  </div>
+
+    <!--<div align="center">-->
+      <!--<ul class="pagination pagination-sm">-->
+        <!--<li><a href="#">&laquo;</a></li>-->
+        <!--<li class="active"><a href="#">1</a></li>-->
+        <!--<li><a href="#">2</a></li>-->
+        <!--<li><a href="#">3</a></li>-->
+        <!--<li><a href="#">4</a></li>-->
+        <!--<li><a href="#">5</a></li>-->
+        <!--<li><a href="#">&raquo;</a></li>-->
+      <!--</ul>-->
+    <!--</div>-->
 </div>

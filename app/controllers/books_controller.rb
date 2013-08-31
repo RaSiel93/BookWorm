@@ -12,7 +12,7 @@ class BooksController < ApplicationController
     elsif params[:id]
       @books = Book.where :category_id => params[:id]
     else
-      @books = Book.all
+      @books = Book.all.paginate(:page => params[:page]).order('id DESC')
     end
   end
 
