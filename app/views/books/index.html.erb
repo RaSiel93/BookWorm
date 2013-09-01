@@ -5,22 +5,24 @@
 <% end %>
 <div>
     <% @books.each do |book| %>
-        <div class="shelf booktext text-warning">
+        <div class="shelf booktext text-warning select_book">
             <h1>
                 <%= link_to book.title, book %>
             </h1>
-            <p>
-                <%= markdown(book.description)  %>
-            </p>
             <div>
-                <p>метки: -
+                <p>
+                    <%= markdown(book.description)  %>
+                </p>
+                <p>
+                    Метки:
                     <%book.tag_list.each do |tag|  %>
                         <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b> -
                     <%end%>
                 </p>
-            </div>
-            <div>
-                <%= link_to 'Читать', book %>
+                <p>
+                    Автор:
+                    <%= Users.where(:id => book.user_id).first.email %>
+                </p>
             </div>
         </div>
     <% end %>
@@ -53,16 +55,4 @@
       <% end %>
     </ul>
   </div>
-
-    <!--<div align="center">-->
-      <!--<ul class="pagination pagination-sm">-->
-        <!--<li><a href="#">&laquo;</a></li>-->
-        <!--<li class="active"><a href="#">1</a></li>-->
-        <!--<li><a href="#">2</a></li>-->
-        <!--<li><a href="#">3</a></li>-->
-        <!--<li><a href="#">4</a></li>-->
-        <!--<li><a href="#">5</a></li>-->
-        <!--<li><a href="#">&raquo;</a></li>-->
-      <!--</ul>-->
-    <!--</div>-->
 </div>

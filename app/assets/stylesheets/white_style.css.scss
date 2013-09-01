@@ -8,3 +8,7 @@ body {
 .black {
   background: rgba(0,0,0,0.3);
 }
+.select_book:hover{
+  background: rgba(205, 205, 205, 0.1);
+  transition: all 0.5s ease-in-out;
+}
