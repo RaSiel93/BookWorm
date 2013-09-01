@@ -9,7 +9,8 @@ class Book < ActiveRecord::Base
 
   has_many :chapters, dependent: :destroy
   has_one :category
+  acts_as_taggable
+  acts_as_taggable_on :tags
 
   self.per_page = 5
-  acts_as_taggable
 end
