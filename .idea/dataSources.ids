@@ -124,9 +124,28 @@
       <column name="last_sign_in_ip" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="username" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="confirmation_token" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="confirmed_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="confirmation_sent_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="unconfirmed_email" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <index name="index_users_on_email" unique="true" columns="email"/>
       <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token"/>
+    </table>
+    <table name="votes" schema="" catalog="bookworm_development" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="votable_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="votable_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="voter_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="voter_type" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="vote_flag" sqlType="BIT" length="0" precision="0" nullable="true" jdbcType="-7"/>
+      <column name="vote_scope" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="index_votes_on_votable_id_and_votable_type_and_vote_scope" unique="false" columns="votable_id,votable_type,vote_scope"/>
+      <index name="index_votes_on_voter_id_and_voter_type_and_vote_scope" unique="false" columns="voter_id,voter_type,vote_scope"/>
     </table>
     <table name="CHARACTER_SETS" schema="" catalog="information_schema" type="SYSTEM TABLE">
       <column name="CHARACTER_SET_NAME" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" def="Jyc="/>

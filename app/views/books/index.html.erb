@@ -3,6 +3,14 @@
       <%= link_to 'Добавить книгу', new_book_path %>
     </h3>
 <% end %>
+<div class="shelf row-fluid">
+  <p class="fluid">Сортировать по</p>
+  <select class="fluid">
+    <option>Новизна</option>
+    <option>Рейтинг</option>
+  </select>
+  <%= button_to 'Выбрать' %>
+</div>
 <div>
     <% @books.each do |book| %>
         <div class="shelf booktext text-warning select_book">
@@ -11,17 +19,17 @@
             </h1>
             <div>
                 <p>
-                    <%= markdown(book.description)  %>
+                    <%= markdown(book.description) %>
                 </p>
                 <p>
                     Метки:
                     <%book.tag_list.each do |tag|  %>
-                        <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b> -
+                        <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b>
                     <%end%>
                 </p>
                 <p>
                     Автор:
-                    <%= User.where(:id => book.user_id).first.username %>
+                  <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
                 </p>
             </div>
         </div>

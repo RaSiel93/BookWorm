@@ -21,12 +21,19 @@
           Автор:
           <%= User.where(:id => @book.user_id).first.email %>
         </p>
+        <p>
+          Рейтинг:
+          <%= @book.positives.size %>
+        </p>
       </div>
           <div id="book">
             <% if user_signed_in? %>
                 <%= link_to 'Добавить главу', new_book_chapter_path(book_id: @book.id) %> |
                 <%= link_to 'Редактировать', edit_book_path(@book) %> |
                 <%= link_to 'Удалить книгу', @book, method: :delete, data: { confirm: 'Вы уверены?' } %> |
+
+                <%= button_to 'Like', like_path(@book), :class => 'btn' %>
+                <%= button_to 'Dislike', dislike_path(@book), :class => 'btn' %>
             <% end %>
             <%= link_to 'Назад', books_path %>
           </div>

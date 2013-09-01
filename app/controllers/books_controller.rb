@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy, :set_like, :set_dislike]
   #before_action :set_chapter, only: [:show]
 
   # GET /books
@@ -9,10 +9,12 @@ class BooksController < ApplicationController
       @books = Book.search(params[:search])
     elsif params[:tag]
       @books = Book.tagged_with(params[:tag])
-    elsif params[:id]
-      @books = Book.where :category_id => params[:id]
+    elsif params[:category]
+      @books = Book.where(:category_id => params[:category])
+    elsif params[:user_id]
+      @books = Book.where(:user_id => params[:user_id])
     else
-      @books = Book.all.paginate(:page => params[:page]).order('id DESC')
+      @books = Book.paginate(:page => params[:page]).order('id DESC')
     end
   end
 
@@ -70,6 +72,23 @@ class BooksController < ApplicationController
       format.html { redirect_to books_url }
       format.json { head :no_content }
     end
+  end
+
+  def set_like
+    #Book.find(current_user.id)
+    #like = Vot.find(:voter_id == current_user.id && :votable_id == @book.id)
+    #@book.votes.up.by_type(current_user).voters
+
+    if @book.vote_registered?
+      @book.downvote_from current_user
+    else
+      @book.liked_by current_user
+    end
+    redirect_to :back
+  end
+  def set_dislike
+    @book.downvote_from current_user
+    redirect_to :back
   end
 
   private

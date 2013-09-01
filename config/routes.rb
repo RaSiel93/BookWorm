@@ -13,15 +13,18 @@ Bookworm::Application.routes.draw do
 
   post "markitup/preview"
 
-  get 'categories/:id', to: 'books#index', as: :category
+  get 'categories/:category', to: 'books#index', as: :category
 
   get 'pages/:page', to: 'books#index', as: :page
 
   get 'tags/:tag', to: 'books#index', as: :tag
 
+  get 'users/:user_id', to: 'books#index', as: :user
+
   post 'books/index/switch_theme', to: 'application#switch_theme'
 
-
+  post 'books/index/like:id', to: 'books#set_like', as: :like
+  post 'books/index/dislike:id', to: 'books#set_dislike', as: :dislike
 
   #match ':controller(/:action(/:id(.:format)))'
   # The priority is based upon order of creation: first created -> highest priority.

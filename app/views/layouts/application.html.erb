@@ -35,7 +35,7 @@
             <%= button_to 'Выйти', destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
         <% else %>
             <%= button_to 'Зарегистрироваться', new_user_registration_path,:method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
-            <%= button_to 'Войти', user_session_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= button_to 'Войти', new_user_session_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
         <% end %>
     </div>
     <div class="col-md-6">
@@ -107,7 +107,7 @@
             flashvars.mode = 'tags';
             flashvars.minFontSize = '8';  /* минимальный размер  шрифта в облаке. Размер задается в пунктах.*/
             flashvars.maxFontSize = '14';  /* максимальный размер  шрифта в облаке. Размер задается в пунктах.*/
-            flashvars.tcolor = '0x000066';  /*"0x006600" - цвет самого частого текста в облаке тегов в RGB формате. Частота текста определяется по свойству ссылки style. 0x не меняем.*/
+            flashvars.tcolor = '0x0066ff';  /*"0x006600" - цвет самого частого текста в облаке тегов в RGB формате. Частота текста определяется по свойству ссылки style. 0x не меняем.*/
             flashvars.tcolor2 = '0x006600'; /* "0x006600" - цвет самого редкого текста в облаке тегов в RGB формате. Частота текста определяется по свойству ссылки style. 0x не меняем.*/
             flashvars.hicolor = '0xFF0000';   /*"0xFF0000" - цвет текста при наведении на него курсора. 0x не меняем.*/
             flashvars.distr = 'true';   /*тип вращения облака, может принимать значение "true" или "false"*/
@@ -121,7 +121,7 @@
             flashvars.tagcloud += '</tags>';
             var params = {};
             /*params.wmode = 'transparent';  устанавливаем фон облака прозрачным. Если убрать эту строку, то можно будет самим задавать цвет фона.*/
-            params.bgcolor = '#FFFFCC';
+            params.bgcolor = '#000000';
             params.allowscriptaccess = 'always';
             var attributes = {};
             attributes.id = 'yoblako';
