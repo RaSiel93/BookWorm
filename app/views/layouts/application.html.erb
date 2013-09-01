@@ -7,7 +7,6 @@
   <title><%= content_for?(:title) ? yield(:title) : "BookWorm" %></title>
   <%= csrf_meta_tag %>
 
-
   <!-- Fav and touch icons -->
   <%= javascript_include_tag "jquery-1.10.2.min", "jqcloud-1.0.4.min", "bootstrap.min" %>
   <%= stylesheet_link_tag "bootstrap.min",  "bootstrap-theme", "jqcloud", "application", media: "all", "data-turbolinks-track" => true %>
@@ -35,7 +34,7 @@
             <%= button_to 'Профиль пользователя', destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
             <%= button_to 'Выйти', destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
         <% else %>
-            <%= button_to 'Зарегистрироваться', user_registration_path, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= button_to 'Зарегистрироваться', new_user_registration_path,:method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
             <%= button_to 'Войти', user_session_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
         <% end %>
     </div>

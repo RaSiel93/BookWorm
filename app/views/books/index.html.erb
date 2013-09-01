@@ -21,7 +21,7 @@
                 </p>
                 <p>
                     Автор:
-                    <%= Users.where(:id => book.user_id).first.email %>
+                    <%= User.where(:id => book.user_id).first.username %>
                 </p>
             </div>
         </div>

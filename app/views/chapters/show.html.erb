@@ -2,13 +2,13 @@
   <p id="notice"><%= notice %></p>
 
   <% if user_signed_in? %>
-    <%= button_to 'Редактировать', edit_book_chapter_path(@book, @chapter), :method => :get %>
+    <%= button_to 'Редактировать', edit_book_chapter_path(@book, @chapter), :method => :get, :class => 'btn' %>
   <% end %>
-  <%= button_to 'К оглавлению', @book, :method => :get %>
-  <button>Предидущая глава</button>
-  <button>Следующая глава</button>
-  <button>FONT_SIZE +</button>
-  <button>FONT_SIZE -</button>
+  <%= button_to 'К оглавлению', @book, :method => :get, :class => 'btn' %>
+  <button class="btn">Предидущая глава</button>
+  <button class="btn">Следующая глава</button>
+  <button class="btn">FONT_SIZE +</button>
+  <button class="btn">FONT_SIZE -</button>
   <label>Ширина страницы:</label>
   <select name="width_reader">
     <option>50%</option>
