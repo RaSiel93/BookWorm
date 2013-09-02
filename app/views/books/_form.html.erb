@@ -12,35 +12,35 @@
         <% end %>
 
         <div class="field">
-            <%= f.label :Название %><br>
+            <%= f.label :title, t("title") %><br>
             <%= f.text_field :title, size: "40" %>
         </div>
 
 
-        <div class="control-group">
-          <%= f.label :tag_list, "Tags (separated by commas)" %>
-          <div class="controls" class="select2-container select2-container-multi" >
-            <%= f.text_field :tag_list, data: {autocomplete_source: Book.tag_counts.map(&:name)} %>
+        <div class="">
+          <%= f.label :tag_list, t("tags") %>
+          <div class="controls field select2-container select2-container-multi" >
+            <%= f.text_field :tag_list, size: "40", data: {autocomplete_source: Book.tag_counts.map(&:name)} %>
           </div>
         </div>
 
         <%= f.hidden_field :user_id, :value => current_user.id %>
         <div class="field">
-            <%= f.label :Категория %><br>
+            <%= f.label :category_id, t("category") %>
             <%= f.collection_select :category_id, Category.all, :id, :title%>
         </div>
         <br>
         <div class="actions">
-            <%= f.submit "Применить изменения"%>
+            <%= f.submit t("apply"), :class => 'btn'%>
         </div>
     </div>
     <div class="col-md-9" align="center">
         <div class="field">
-            <%= f.label :Описание %><br>
+            <%= f.label :Описание %>
             <%= f.text_area :description, :class => 'text_field', size: "40x10" %>
         </div>
     </div>
 <% end %>
 <div class="btn-back">
-  <%= button_to 'Назад', :back, method: :get %>
+  <%= link_to t('back'), :back %>
 </div>

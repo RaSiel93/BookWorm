@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  search: "Search"
+  apply: "Apply"
+  back: "Back"

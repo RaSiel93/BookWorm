@@ -11,49 +11,51 @@
   <%= javascript_include_tag "jquery-1.10.2.min", "jqcloud-1.0.4.min", "bootstrap.min" %>
   <%= stylesheet_link_tag "bootstrap.min",  "bootstrap-theme", "jqcloud", "application", media: "all", "data-turbolinks-track" => true %>
 
-  <% if cookies[:style] == 'black' %>
-    <%= stylesheet_link_tag "black_style" %>
-  <% else %>
-    <%= stylesheet_link_tag "white_style" %>
-  <% end %>
-
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="img/favicon.png">
 
+
+
   <%= javascript_include_tag "application" %>
+
+  <% if cookies[:style] == 'black' %>
+      <%= stylesheet_link_tag "black_style" %>
+  <% else %>
+      <%= stylesheet_link_tag "white_style" %>
+  <% end %>
 </head>
 
 <body>
 <div id="main_panel">
     <div id='authentication' class="col-md-3">
         <% if user_signed_in? %>
-            <%= button_to 'Профиль пользователя', profile_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
-            <%= button_to 'Выйти', destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= link_to t('profile'), profile_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= link_to t('log_out'), destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
         <% else %>
-            <%= button_to 'Зарегистрироваться', new_user_registration_path,:method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
-            <%= button_to 'Войти', new_user_session_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= link_to t('registration'), new_user_registration_path,:method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= link_to t('log_in'), new_user_session_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
         <% end %>
     </div>
     <div class="col-md-6">
         <form class="navbar-form navbar-right " role="search">
         <div class="form-group">
-          <input name="search" type="text" class="input-medium search-query form-control  input-sm" placeholder="Введите запрос">
+          <input name="search" type="text" class="input-medium search-query form-control  input-sm" placeholder= <%= t('search') %> >
         </div>
-        <button type="submit" class="btn btn-default  input-sm" value="Search">Поиск</button>
+        <button type="submit" class="btn btn-default  input-sm" value="Search"><%=t('find')%></button>
         </form>
     </div>
     <div class="col-md-3">
         <div class="col-lg-6">
-            <button type="button" class="btn navbar-btn input-sm"  value="white_style">Английский язык</button>
+            <button type="button" class="btn navbar-btn input-sm"  value="white_style"><%=t('english_lang')%></button>
         </div>
         <div id="style_theme" class="col-lg-6">
             <% if cookies[:style] == 'black' %>
-              <%= button_to 'Светлый стиль', books_index_switch_theme_path, :class => 'btn btn-inverse navbar-btn input-sm style_theme' %>
+              <%= link_to t('light_style'), books_index_switch_theme_path, :method => :post, :class => 'btn btn-inverse navbar-btn input-sm style_theme' %>
             <% else %>
-              <%= button_to 'Темный стиль', books_index_switch_theme_path, :class => 'btn btn-success navbar-btn input-sm style_theme' %>
+              <%= link_to t('black_style'), books_index_switch_theme_path, :method => :post, :class => 'btn btn-success navbar-btn input-sm style_theme' %>
             <% end %>
         </div>
     </div>
@@ -65,7 +67,7 @@
 <div class="col-lg-2 black" style="position: fixed">
 
   <li class="nav-header  text-warning">
-    Категории
+    <%=t('categories')%>
   </li>
   <ul class="nav nav-stacked nav-pills">
   <% Category.all.each do |f| %>
@@ -81,13 +83,12 @@
 <div id="panel_tags" class="col-lg-2 black" style="padding:0;">
 
   <li class="nav-header  text-warning" style="text-decoration: none">
-    Тэги
+    <%=t('tags')%>
   </li>
   <ul class="nav nav-stacked nav-pills ">
     <div id="tag_cloud">
 
       <div align="center">
-        <!--Ставить туда где хотите видеть облако-->
 
         <div id="yoblako" align=center>
             <noindex>

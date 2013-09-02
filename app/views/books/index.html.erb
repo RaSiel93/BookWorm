@@ -1,16 +1,3 @@
-<% if user_signed_in? %>
-    <h3 id="add_book" class="shelf" align="center">
-      <%= link_to 'Добавить книгу', new_book_path %>
-    </h3>
-<% end %>
-<div class="shelf row-fluid">
-  <p class="fluid">Сортировать по</p>
-  <select class="fluid">
-    <option>Новизна</option>
-    <option>Рейтинг</option>
-  </select>
-  <%= button_to 'Выбрать' %>
-</div>
 <div>
     <% @books.each do |book| %>
         <div class="shelf booktext text-warning select_book">
@@ -34,8 +21,6 @@
             </div>
         </div>
     <% end %>
-
-
   <div align="center">
     <ul class="pagination pagination-sm">
 

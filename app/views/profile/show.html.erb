@@ -1,0 +1,30 @@
+<% if user_signed_in? %>
+    <h3 id="add_book" class="shelf" align="center">
+      <%= link_to 'Добавить книгу', new_book_path %>
+    </h3>
+<% end %>
+<div>
+  <% books = Book.where(:user_id => current_user.id) %>
+      <% books.each do |book| %>
+          <div class="shelf booktext text-warning select_book">
+            <h1>
+              <%= link_to book.title, book %>
+            </h1>
+            <div>
+              <p>
+                <%= markdown(book.description) %>
+              </p>
+              <p>
+                Метки:
+                <%book.tag_list.each do |tag|  %>
+                    <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b>
+                <%end%>
+              </p>
+              <p>
+                Автор:
+                <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
+              </p>
+            </div>
+          </div>
+      <% end %>
+</div>
