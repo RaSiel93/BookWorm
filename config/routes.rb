@@ -21,7 +21,10 @@ Bookworm::Application.routes.draw do
 
   get 'profile', to: 'profile#show', as: :profile
 
+
+
   post 'books/index/switch_theme', to: 'application#switch_theme'
+  post 'books/index/switch_locale', to: 'application#switch_locale'
 
   post 'books/index/like:id', to: 'books#set_like', as: :like
   post 'books/index/dislike:id', to: 'books#set_dislike', as: :dislike

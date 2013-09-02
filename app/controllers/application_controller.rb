@@ -7,10 +7,17 @@ class ApplicationController < ActionController::Base
   def switch_theme
     if cookies[:style] == 'black'
       cookies[:style] = 'white'
-      I18n.locale = 'en'
     else
       cookies[:style] = 'black'
-      I18n.locale = 'ru'
+    end
+    redirect_to :back
+  end
+
+  def switch_locale
+    if cookies[:locale] == 'ru'
+      cookies[:locale] = 'en'
+    else
+      cookies[:locale] = 'ru'
     end
     redirect_to :back
   end

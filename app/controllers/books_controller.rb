@@ -14,7 +14,7 @@ class BooksController < ApplicationController
     elsif params[:user_id]
       @books = Book.where(:user_id => params[:user_id])
     else
-      @books = Book.paginate(:page => params[:page]).order('id DESC')
+      @books = Book.paginate(:page => params[:page]).order(:created_at => :desc)
     end
   end
 

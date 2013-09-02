@@ -3,7 +3,7 @@
     <%= notice %>
   </p>
   <div>
-    <div class="shelf book "  align="center">
+    <div class="shelf book"  align="center">
         <h1 align="center">
           <%= @book.title %>
         </h1>
@@ -21,7 +21,7 @@
           <%= User.where(:id => @book.user_id).first.email %>
         </p>
         <p>
-          Рейтинг:
+          <%= t('rating')%>:
           <%= @book.positives.size %>
         </p>
       </div>
@@ -36,17 +36,17 @@
                 <%= link_to "#{image_tag('logo.png')}", like_path(@book), method: :post, :class => 'btn' %>
                 <img style="height:22px" href="<%=image_tag('glyphicons_012_heart.png')%>"  />
             <% end %>
-            <%= link_to 'Назад', books_path %>
+            <%= link_to t('back'), books_path %>
           </div>
     </div>
     <div>
       <% @book.chapters.order(:number).each do |chapter| %>
           <div id="chapters" class="shelf ">
             <h3>Глава <%= chapter.number %>: <%= chapter.title %></h3>
-            <%= link_to t('Открыть главу'), book_chapter_path(@book, chapter) %>
+            <%= link_to t('open chapter'), book_chapter_path(@book, chapter) %>
             <% if user_signed_in? %>
-                | <%= link_to t('Редактировать'), edit_book_chapter_path(@book, chapter) %> |
-                <%= link_to t('Удалить'), [@book, chapter], method: :delete, data: { confirm: 'Вы уверены?' }%>
+                | <%= link_to t('edit'), edit_book_chapter_path(@book, chapter) %> |
+                <%= link_to t('remove'), [@book, chapter], method: :delete, data: { confirm: 'Вы уверены?' }%>
             <% end %>
           </div>
       <% end %>

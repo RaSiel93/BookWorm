@@ -2,21 +2,21 @@
   <p id="notice"><%= notice %></p>
 
   <% if user_signed_in? %>
-    <%= button_to 'Редактировать', edit_book_chapter_path(@book, @chapter), :method => :get, :class => 'btn' %>
+    <%= button_to t('edit'), edit_book_chapter_path(@book, @chapter), :method => :get, :class => 'btn' %>
   <% end %>
-  <%= button_to 'К оглавлению', @book, :method => :get, :class => 'btn' %>
-  <button class="btn">Предидущая глава</button>
-  <button class="btn">Следующая глава</button>
+  <%= button_to t('back_to_contents'), @book, :method => :get, :class => 'btn' %>
+  <button class="btn"><%=t('previous_chapter')%></button>
+  <button class="btn"><%=t('next_chapter')%></button>
   <button class="btn">FONT_SIZE +</button>
   <button class="btn">FONT_SIZE -</button>
-  <label>Ширина страницы:</label>
+  <label><%=t('width')%></label>
   <select name="width_reader">
     <option>50%</option>
     <option>70%</option>
     <option>100%</option>
   </select>
 
-  <h1>Глава <%= @chapter.number %>: <%= @chapter.title %> </h1>
+  <h1><%= t('chapter') + @chapter.number + ':' + @chapter.title %></h1>
 
   <%= markdown(@chapter.content)%>
 </div>

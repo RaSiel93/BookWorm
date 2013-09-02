@@ -4,9 +4,9 @@
   <tbody>
     <% @chapters.each do |chapter| %>
       <tr>
-        <td><%= link_to 'Show', chapter %></td>
-        <td><%= link_to 'Edit', edit_book_chapter_path(chapter) %></td>
-        <td><%= link_to 'Destroy', chapter, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+        <td><%= link_to t('show'), chapter %></td>
+        <td><%= link_to t('edit'), edit_book_chapter_path(chapter) %></td>
+        <td><%= link_to t('destroy'), chapter, method: :delete, data: { confirm: t('are_you_sure?') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -14,4 +14,4 @@
 
 <br>
 
-<%= link_to 'New Chapter', new_book_chapter_path %>
+<%= link_to t('new_chapter'), new_book_chapter_path %>
