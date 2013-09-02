@@ -21,15 +21,15 @@
           <%= User.where(:id => @book.user_id).first.email %>
         </p>
         <p>
-          <%= t('rating')%>:
+          <%= t('book.rating')%>:
           <%= @book.positives.size %>
         </p>
       </div>
           <div id="book">
             <% if user_signed_in? %>
-                <%= link_to t('add_chapter'), new_book_chapter_path(book_id: @book.id) %> |
-                <%= link_to t('edit'), edit_book_path(@book) %> |
-                <%= link_to t('remove_book'), @book, method: :delete, data: { confirm: 'Вы уверены?' } %> |
+                <%= link_to t('chapter.add'), new_book_chapter_path(book_id: @book.id) %> |
+                <%= link_to t('book.edit'), edit_book_path(@book) %> |
+                <%= link_to t('book.remove'), @book, method: :delete, data: { confirm: 'Вы уверены?' } %> |
 
                 <a href class="glyphicons heart" ></a>
                 <img href="glyphicons_012_heart.png"/>
@@ -43,10 +43,10 @@
       <% @book.chapters.order(:number).each do |chapter| %>
           <div id="chapters" class="shelf ">
             <h3>Глава <%= chapter.number %>: <%= chapter.title %></h3>
-            <%= link_to t('open chapter'), book_chapter_path(@book, chapter) %>
+            <%= link_to t('chapter.open'), book_chapter_path(@book, chapter) %>
             <% if user_signed_in? %>
-                | <%= link_to t('edit'), edit_book_chapter_path(@book, chapter) %> |
-                <%= link_to t('remove'), [@book, chapter], method: :delete, data: { confirm: 'Вы уверены?' }%>
+                | <%= link_to t('chapter.edit'), edit_book_chapter_path(@book, chapter) %> |
+                <%= link_to t('chapter.remove'), [@book, chapter], method: :delete, data: { confirm: 'Вы уверены?' }%>
             <% end %>
           </div>
       <% end %>

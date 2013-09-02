@@ -22,8 +22,27 @@ ru:
   comedy: 'Комедийные'
   detective: 'Детективы'
   author: 'Автор'
+  search: 'Поиск'
+
 
   username: 'Имя'
+  email: 'Электрон адрес'
+  password: 'Пароль'
+  password_confirmation: 'Подтверждение пароля'
+  remember_me: 'Запомнить меня'
+  sign_up: "Регистрация"
+  sign_in: "Вход"
 
+  chapter:
+    open: 'Открыть главу'
+    add: 'Добавить главу'
+    edit: 'Редактирование главы'
+    remove: 'Удалить главу'
 
-
+  book:
+    open: 'Открыть книгу'
+    add: 'Добавить книгу'
+    edit: 'Редактирование книги'
+    remove: 'Удалить книгу'
+    description: 'Краткое описание'
+    rating: 'Рейтинг'

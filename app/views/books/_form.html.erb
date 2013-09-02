@@ -27,7 +27,7 @@
         <%= f.hidden_field :user_id, :value => current_user.id %>
         <div class="field">
             <%= f.label :category_id, t("category") %>
-            <%= f.collection_select :category_id, Category.all, :id, :title%>
+            <%= f.collection_select :category_id, Category.all.map{|c| c.title = t(c.title); c }, :id, :title%>
         </div>
         <br>
         <div class="actions">
@@ -36,7 +36,7 @@
     </div>
     <div class="col-md-9" align="center">
         <div class="field">
-            <%= f.label :Описание %>
+            <%= f.label :description, t('description') %>
             <%= f.text_area :description, :class => 'text_field', size: "40x10" %>
         </div>
     </div>
