@@ -17,7 +17,6 @@
     <%= stylesheet_link_tag "white_style" %>
   <% end %>
 
-
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
@@ -31,7 +30,7 @@
 <div id="main_panel">
     <div id='authentication' class="col-md-3">
         <% if user_signed_in? %>
-            <%= button_to 'Профиль пользователя', destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
+            <%= button_to 'Профиль пользователя', profile_path, :method => :get, :class => 'btn btn-success navbar-btn input-sm' %>
             <%= button_to 'Выйти', destroy_user_session_path, :method => :delete, :class => 'btn btn-success navbar-btn input-sm' %>
         <% else %>
             <%= button_to 'Зарегистрироваться', new_user_registration_path,:method => :get, :class => 'btn btn-success navbar-btn input-sm' %>

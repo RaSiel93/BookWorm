@@ -21,6 +21,8 @@ Bookworm::Application.routes.draw do
 
   get 'users/:user_id', to: 'books#index', as: :user
 
+  get 'profile', to: 'profile#show', as: :profile
+
   post 'books/index/switch_theme', to: 'application#switch_theme'
 
   post 'books/index/like:id', to: 'books#set_like', as: :like
