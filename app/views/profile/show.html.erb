@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
     <h3 id="add_book" class="shelf" align="center">
-      <%= link_to 'Добавить книгу', new_book_path %>
+      <%= link_to t('book.add'), new_book_path %>
     </h3>
 <% end %>
 <div>
@@ -15,13 +15,13 @@
                 <%= markdown(book.description) %>
               </p>
               <p>
-                Метки:
+                <%=t('tags') + ': '%>
                 <%book.tag_list.each do |tag|  %>
                     <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b>
                 <%end%>
               </p>
               <p>
-                Автор:
+                <%=t('author') + ': '%>
                 <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
               </p>
             </div>

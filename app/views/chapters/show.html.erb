@@ -1,22 +1,20 @@
 <div class="book shelf">
-  <p id="notice"><%= notice %></p>
-
   <% if user_signed_in? %>
-    <%= button_to t('edit'), edit_book_chapter_path(@book, @chapter), :method => :get, :class => 'btn' %>
+    <%= button_to t('chapter.edit'), edit_book_chapter_path(@book, @chapter), :method => :get, :class => 'btn' %>
   <% end %>
-  <%= button_to t('back_to_contents'), @book, :method => :get, :class => 'btn' %>
-  <button class="btn"><%=t('previous_chapter')%></button>
-  <button class="btn"><%=t('next_chapter')%></button>
+  <%= button_to t('book.content'), @book, :method => :get, :class => 'btn' %>
+  <button class="btn"><%=t('chapter.previous')%></button>
+  <button class="btn"><%=t('chapter.next')%></button>
   <button class="btn">FONT_SIZE +</button>
   <button class="btn">FONT_SIZE -</button>
-  <label><%=t('width')%></label>
+  <label><%=t('chapter.width')%></label>
   <select name="width_reader">
     <option>50%</option>
     <option>70%</option>
     <option>100%</option>
   </select>
 
-  <h1><%= t('chapter') + @chapter.number + ':' + @chapter.title %></h1>
+  <h1><%= t('chapter.chapter') + ' ' + @chapter.number.to_s + ': ' + @chapter.title %></h1>
 
   <%= markdown(@chapter.content)%>
 </div>

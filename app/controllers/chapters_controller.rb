@@ -28,7 +28,7 @@ class ChaptersController < ApplicationController
     @chapter = @book.chapters.new(chapter_params)
     respond_to do |format|
       if @chapter.save
-        format.html { redirect_to [@book,@chapter], notice: 'Chapter was successfully created.' }
+        format.html { redirect_to [@book,@chapter], notice: t('chapter.create.successfully') }
         format.json { render action: 'show', status: :created, location: @chapter }
       else
         format.html { render action: 'new' }
@@ -43,7 +43,7 @@ class ChaptersController < ApplicationController
     @chapter = @book.chapters.where(:id => params[:id]).first
     respond_to do |format|
       if @chapter.update(chapter_params)
-        format.html { redirect_to [@book, @chapter], notice: 'Chapter was successfully updated.' }
+        format.html { redirect_to [@book, @chapter], notice: t('chapter.create.successfully') }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

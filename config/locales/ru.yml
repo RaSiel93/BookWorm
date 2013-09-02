@@ -1,6 +1,5 @@
 ru:
   registration: 'Зарегистрироваться'
-  profile: 'Профиль пользователя'
   log_out: 'Выйти'
   log_in: 'Войти'
   find: 'Найти'
@@ -14,6 +13,7 @@ ru:
   apply: 'Применить'
   back: 'Назад'
   english_lang: 'Английский язык'
+
   horror: 'Ужасы'
   fantasy: 'Фэнтези'
   education: 'Образование'
@@ -34,10 +34,18 @@ ru:
   sign_in: "Вход"
 
   chapter:
+    chapter: 'Глава'
     open: 'Открыть главу'
     add: 'Добавить главу'
     edit: 'Редактирование главы'
     remove: 'Удалить главу'
+    previous: 'Предыдущая глава'
+    next: 'Следующая глава'
+    width: 'Ширина страницы'
+    create:
+      successfully: 'Глава успешно создана.'
+    update:
+      successfully: 'Глава успешно обновлена.'
 
   book:
     open: 'Открыть книгу'
@@ -46,3 +54,15 @@ ru:
     remove: 'Удалить книгу'
     description: 'Краткое описание'
     rating: 'Рейтинг'
+    content: 'К содержанию'
+    like: 'Проголосовать'
+    create:
+      successfully: 'Книга успешно создана.'
+    update:
+      successfully: 'Книга успешно обновлена.'
+
+  profile:
+    tags: 'Тэги'
+    author: 'Автор'
+
+  profile: 'Профиль пользователя'

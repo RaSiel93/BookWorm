@@ -31,3 +31,22 @@ en:
   computers: 'Computers'
   comedy: 'Comedy'
   titles: 'Titles'
+
+  sign_in: "Sign In"
+
+  chapter:
+    create:
+      successfully: 'Chapter was successfully created.'
+    update:
+      successfully: 'Chapter was successfully updated.'
+
+  book:
+    open: 'Open book'
+    add: 'Add book'
+    edit: 'Edit book'
+    remove: 'Remove book'
+    like: 'To vote'
+    create:
+      successfully: 'Book was successfully created.'
+    update:
+      successfully: 'Book was successfully updated.'
