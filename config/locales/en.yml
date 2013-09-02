@@ -24,10 +24,10 @@ en:
   search: "Search"
   apply: "Apply"
   back: "Back"
-
-  Horror: 'Horror'
-  Fantasy: 'Fantasy'
-  Education: 'Education'
-  Adventure: 'Adventure'
-  Computers: 'Computers'
-  Comedy: 'Comedy'
+  horror: 'Horror'
+  fantasy: 'Fantasy'
+  education: 'Education'
+  adventure: 'Adventure'
+  computers: 'Computers'
+  comedy: 'Comedy'
+  titles: 'Titles'

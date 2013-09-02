@@ -1,273 +1,29 @@
 ru:
-   account: 'Учетная Запись'
-   activerecord:
-     errors:
-       messages:
-         blank: 'обязательное поле' # required
-         invalid: 'неверный формат' #invalid_format
-         not_a_number: 'должно быть числом' # must be number
-         not_a_page: "должно быть страницей по адресу"
-         not_permitted: 'должно быть допустимым значением'
-         taken: 'имя ужe существует' # name_in_use
-         too_long: 'ограничение {{count}} символов' # character_limit
-         too_short: 'минимум {{count}} символов' # character_minimum
-       models:
-         page:
-           attributes:
-             slug:
-               taken: 'окончание URL (slug) уже используется в иерархии страниц' # slug_in_use
-         user:
-           attributes:
-             email:
-               invalid: 'неверный адрес e-mail' # invalid_email
-             login:
-               taken: Логин пользователя занят # login_in_use
-             password:
-               confirmation: 'несоответствие подтверждению' # password_confirmation
-   add_child: 'Добавить Потомка'
-   add_field: 'Добавить поле'
-   add_part: 'Добавить Часть'
-   add_tab: 'Добавить вкладку'
-   admin: 'Администратор'
-   available_tags: 'Доступные тэги'
-   available_tags_for: 'Тэги '
-   body: 'Содержимое'
-   breadcrumb: 'Хлебная крошка'
-   buttons:
-     create: 'Создать' # removed {{name}} because of russian word cases problems
-     save_and_continue: 'Сохранить и продолжить'
-     save_changes: 'Сохранить'
-   cancel: 'Отменить'
-   change: 'Изменить'
-   close: 'Закрыть'
-   config:
-     admin:
-       title: 'Заголовок админки'
-     defaults:
-       locale: 'Язык по умолчанию'
-       page:
-         fields: "Поля страницы"
-         filter: "Фильтр страницы"
-         parts: "Части страницы"
-         status: "Статус страницы"
-       snippet:
-         filter: "Фильтр сниппета"
-     dev:
-       host: "Домен сайта разработки"
-     local:
-       timezone: "Часовой пояс"
-     site:
-       title: "Название сайта"
-       host: "Домен сайта"
-     user:
-       allow_password_reset?: "Позволять сбрасывать пароль"
-   content: 'Содержимое'
-   content_type: 'Content&#8209;Type'
-   creating_status: 'Создается {{model}}&#8230;'
-   date:
-     abbr_day_names: [Вск, Пнд, Втр, Срд, "Чтв", Птн, Суб]
-     abbr_month_names: [~, Янв, Фев, Мар, Апр, Май, Июн, Июл, Авг, Сен, Окт, Ноя, Дек]
-     day_names: [Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота]
-     formats:
-       default: "%D-%M-%Y"
-       long: "%B %e, %Y"
-       only_day: "%e"
-       short: "%e %b"
-     month_names: [~, Января, Февраля, Марта, Апреля, Мая, Июня, Июля, Августа, Сентября, Октября, Ноября, Декабря]
-     order:
-       - :year
-       - :month
-       - :day
-   delete_layout: 'Удалить макет' #delete
-   delete_pages: 'Удалить {{pages}}'  #button
-   delete_snippet: 'Удалить вставку'
-   delete_user: 'Удалить пользователя'
-   description: 'Описание'
-   design: 'Дизайн'
-   designer: 'Дизайнер'
-   draft: 'Черновик'
-   edit: 'Редактировать'
-   edit_configuration: 'Редактировать конфигурацию'
-   edit_layout: 'Редактировать макет'
-   edit_page:  'Редактировать страницу'
-   edit_preferences: 'Редактировать настройки'
-   edit_settings: 'Редактировать настройки'
-   edit_snippet: 'Редактировать вставки'
-   edit_user: 'Редактировать пользователя'
-   email_address: 'E-mail адрес'
-   extension: 'Расширение'
-   extensions: 'Расширения'
-   filter: 'Фильтр'
-   hidden: 'Скрыта'
-   hide: 'Скрыть'
-   keywords: 'Ключевые слова'
-   language: 'Язык'
-   layout: 'Макет'
-   layouts: 'Макеты'
-   log_out: 'Выход'
-   logged_in_as: 'Текущий Пользователь'
-   login: 'Войти'
-   modify: 'Изменить'
-   more: 'Ещё'
-   more_info: 'Ещё'
-   name: 'Имя'
-   new_homepage: 'Новая главная'
-   new_layout: 'Новый макет'
-   new_page: 'Новая страница'
-   new_password: 'Новый пароль'
-   new_snippet: 'Новая вставка'
-   new_user: 'Новый пользователь'
-   'no': 'Нет'
-   no_layouts: 'Нет макетов'
-   no_pages: 'Нет страниц'
-   no_snippets: 'Нет сниппетов'
-   normal_page: 'Нормальная страница'
-   notes: 'Заметки'
-   optional: 'Опционально'
-   or: '&nbsp;&nbsp;'
-   page: 'Страница'
-   page_hierarchy: 'Иерархия страниц текущего сайта'
-   page_page: 'Часть страницы'
-   page_title: 'Заголовок'
-   page_type: 'Тип страницы'
-   pages: 'Страницы'
-   pages_controller:
-     removed_many: "Страницы успешно удалены с сайта."
-     removed_one: "Страница успешно удалена с сайта."
-     saved: "Страница сохранена."
-   password: 'Пароль'
-   password_confirmation: 'Подтверждение Пароля'
-   personal: 'Персональное'
-   personal_preferences: 'Персональные Настройки'
-   please_login: 'Вход в систему'
-   powered_by: 'Работает на'
-   preferences: 'Настройки'
-   preferences_controller:
-     error_updating: "Ошибка при сохранении настроек."
-     updated: "Ваши настройки сохранены"
-   preview: 'Предпросмотр'
-   published: 'Опубликована'
-   published_at: 'Опубликовано'
-   published_on: 'Дата публикации'
-   reference:  'Справка'
-   remember_me: 'Запомнить меня'
-   remember_me_in_this_browser: 'Запомнить меня в этом браузере'
-   remove: 'Удалить'
-   remove_field: 'Удалить поле'
-   remove_layout: 'Удалить макет'
-   remove_page: 'Удалить страницу'
-   remove_pages: 'Удалить {{pages}}'  #page title
-   remove_snippet: 'Удалить сниппет'
-   remove_tab: 'Удалить вкладку'
-   remove_user: 'Удалить пользователя'
-   required: 'Обязательно'
-   resource_controller:
-     not_found: "{{humanized_model_name}} не удалось найти."
-     removed: "Объекты успешно удалены."
-     saved: "Данные сохранены."
-     update_conflict: "Данные были модифицированы с момента загрузки. Измененмя не могут быть сохранены т.к. возможна потеря информации."
-     validation_errors: "Форма содержит ошибки. Для продолжения проверьте и исправьте пожалуйста введенные данные."
-   reviewed: 'Проверена'
-   roles: 'Роли'
-   saving_changes: Сохранение изменений
-   saving_preferences: Сохранение настроек
-   scheduled: Ожидает публикации
-   search_tags: 'Поиск по тэгам:'
-   select:
-     default: '<default>'
-     inherit: '<родительский>'
-     none: '<нет>'
-     normal: '<обычный>'
-   settings: 'Настройки'
-   show_all: 'Показать всё'
-   slug: 'адрес (slug)'
-   snippet: 'Вставка'
-   snippets: 'Вставки'
-   status: 'Статус'
-   # Warnings and info text:
-   testing: 'Тестирование'
-   text:
-     layouts:
-       remove_warning: 'Вы уверены что хотите <strong class="warning">безвозвратно удалить</strong> макет'
-     pages:
-       remove_warning: 'Вы уверены что хотите <strong class="warning">безвозвратно удалить</strong> {{pages}}?'
-     snippets:
-       remove_warning: 'Вы уверены что хотите <strong class="warning">безвозвратно удалить</strong> эту вставку?'
-     users:
-       remove_warning: 'Вы уверены что хотите <strong class="warning">безвозвратно удалить</strong> этого пользователя?'
-   this_file_language: "Русский"
-   time:
-     am: "am"
-     formats:
-       datetime:
-         formats:
-           default: "%Y-%m-%dT%H:%M:%S%Z"
-       default: "%a %b %d %H:%M:%S %Z %Y"
-       long: "%d %B %Y %H:%M"
-       only_second: "%S"
-       short: "%d %b %H:%M"
-       time: "%H:%M"
-       timestamp: "%d %B %Y в %H:%M"
-     pm: "pm"
-   timestamp:
-     at: ''
-     by: 'пользователем'
-     last_updated: 'Обновлено'
-   type: 'Type'
-   units:
-     KB: "KB"
-     MB: "MB"
-     GB: "GB"
-     seconds: "seconds"
-     minutes: "minutes"
-     hours: "hours"
-     days: "days"
-     weeks: "weeks"
-     months: "months"
-   user: 'Пользователь'
-   username: 'Логин'
-   username_or_email: 'Username or E-mail Address'
-   users: 'Пользователи'
-   users_controller:
-     cannot_delete_self: "Нельзя удалять себя."
-   version: Версия
-   view_site: 'Cайт -&gt;'
-   warning: 'Осторожно'
-   website: 'Веб сайт'
-   welcome_controller:
-     invalid_user: 'Неверное имя либо пароль.'
-     logged_out: 'Вы вышли из системы.'
-   'yes': 'Да'
-   normal_page: 'Страница'
-   search: 'Поиск'
-   # Sheets extension
-   new_javascript: 'Новый javascript'
-   new_stylesheet: 'Новый файл стилей'
-   upload: 'Загрузить файл'
-   edit_stylesheet: 'Редактирование файла стилей'
+  registration: 'Зарегистрироваться'
+  profile: 'Профиль пользователя'
+  log_out: 'Выйти'
+  log_in: 'Войти'
+  find: 'Найти'
+  light_style: 'Светлый стиль'
+  black_style: 'Темный стиль'
+  category: 'Категория'
+  categories: 'Категории'
+  tag: 'Тэг'
+  tags: 'Тэги'
+  title: 'Название'
+  apply: 'Применить'
+  back: 'Назад'
+  english_lang: 'Английский язык'
+  horror: 'Ужасы'
+  fantasy: 'Фэнтези'
+  education: 'Образование'
+  adventure: 'Приключения'
+  computers: 'Компьютерные'
+  comedy: 'Комедийные'
+  detective: 'Детективы'
+  author: 'Автор'
 
+  username: 'Имя'
 
-   registration: 'Зарегистрироваться'
-   profile: 'Профиль пользователя'
-   log_out: 'Выйти'
-   log_in: 'Войти'
-   find: 'Найти'
-   light_style: 'Светлый стиль'
-   black_style: 'Темный стиль'
-   category: 'Категория'
-   categories: 'Категории'
-   tags: 'Тэги'
-   tag: 'Тэг'
-   title: 'Название'
-   apply: 'Применить'
-   back: 'Назад'
-   english_lang: 'Английский язык'
-   Horror: 'Ужасы'
-   Fantasy: 'Фэнтези'
-   Education: 'Образование'
-   Adventure: 'Приключения'
-   Computers: 'Компьютерные'
-   Comedy: 'Комедийные'
-   author: 'Автор'
 
 

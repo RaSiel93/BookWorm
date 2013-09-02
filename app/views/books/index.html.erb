@@ -15,8 +15,8 @@
                     <%end%>
                 </p>
                 <p>
-                  <%=t('author')%>:
-                  <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
+                    <%=t('author')%>:
+                    <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
                 </p>
             </div>
         </div>
