@@ -84,8 +84,11 @@ class BooksController < ApplicationController
     else
       @book.liked_by current_user
     end
-    redirect_to :back
+    respond_to do |format|
+      format.js {}
+    end
   end
+
   def set_dislike
     @book.downvote_from current_user
     redirect_to :back

@@ -14,19 +14,20 @@
               <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b>
           <%end%>
         </p>
-        <p><%= t('author')%>:
-          <%= User.where(:id => @book.user_id).first.email %>
-        </p>
         <p>
-          <%= t('book.rating')%>:
-          <%= @book.positives.size %>
+          <%= t('author') +': '+ User.where(:id => @book.user_id).first.email %>
         </p>
+        <div id="rating">
+          <p>
+            <%= t('book.rating') +': '+ @book.positives.size.to_s %>
+          </p>
+        </div>
       </div>
           <div id="book">
             <% if user_signed_in? %>
                 <%= link_to t('chapter.add'), new_book_chapter_path(book_id: @book.id) %> |
                 <%= link_to t('book.edit'), edit_book_path(@book) %> |
-                <%= link_to t('book.like'), edit_book_path(@book) %> |
+                <%= link_to t('book.like'), like_path(@book), method: :post, remote:true %> |
                 <%= link_to t('book.remove'), @book, method: :delete, data: { confirm: 'Вы уверены?' } %> |
 
                 <a href class="glyphicons heart" ></a>
