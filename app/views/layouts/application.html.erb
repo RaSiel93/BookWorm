@@ -72,7 +72,7 @@
   <ul class="nav nav-stacked nav-pills">
   <% Category.all.each do |f| %>
     <li>
-      <%= link_to f.title, category_path(f.id) %>
+      <%= link_to t(f.title), category_path(f.id) %>
     </li>
   <% end %>
   </ul>

@@ -262,5 +262,12 @@ ru:
    apply: 'Применить'
    back: 'Назад'
    english_lang: 'Английский язык'
+   Horror: 'Ужасы'
+   Fantasy: 'Фэнтези'
+   Education: 'Образование'
+   Adventure: 'Приключения'
+   Computers: 'Компьютерные'
+   Comedy: 'Комедийные'
+   author: 'Автор'
 
 
