@@ -38,12 +38,11 @@
         <% end %>
     </div>
     <div class="col-md-6">
-        <form class="navbar-form navbar-right " role="search">
-        <div class="form-group">
-          <input name="search" type="text" class="input-medium search-query form-control  input-sm" placeholder= <%= t('search') %> >
-        </div>
-        <button type="submit" class="btn btn-default  input-sm" value="Search"><%=t('find')%></button>
-        </form>
+      <%= form_tag books_path, :method => 'get' do %>
+        <p class='form-horizontal'>
+            <%= text_field_tag :search, params[:search], :class => "search-query pull-right", placeholder:"Search" %>
+        </p>
+      <% end %>
     </div>
     <div class="col-md-3">
         <div id="locale" class="col-lg-6">
@@ -66,8 +65,7 @@
   <a class="btn btn-link" href=<%=books_path%>><img src="http://localhost:3000/assets/logo.png"></a>
 </div>
 <div class="">
-<div class="col-lg-2 black" style="position: fixed">
-
+<div id="panel_category" class="col-lg-2 black" style="position: fixed">
   <li class="nav-header  text-warning">
     <h4><%=t('categories')%></h4>
   </li>
@@ -83,9 +81,9 @@
   <%= bootstrap_flash %>
   <%= yield %>
 
-  <p id="back_top">
-    <a href="#top"><span></span>Back to Top</a>
-  </p>
+  <!--<p id="back_top">-->
+    <!--<a href="#top"><span></span>Back to Top</a>-->
+  <!--</p>-->
 </div>
 <div id="panel_tags" class="col-lg-2 black" style="padding:0;">
 

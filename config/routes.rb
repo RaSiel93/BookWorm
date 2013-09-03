@@ -21,6 +21,8 @@ Bookworm::Application.routes.draw do
 
   get 'profile', to: 'profile#show', as: :profile
 
+  get 'search/:params', to: 'books#index', as: :search
+
 
 
   post 'books/index/switch_theme', to: 'application#switch_theme'

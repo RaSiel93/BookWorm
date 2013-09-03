@@ -1,32 +1,38 @@
 <div>
-    <% @books.each do |book| %>
-        <div id="book" class="shelf booktext text-warning select_book" style="position: relative" element="<%= book.id %>">
-            <h1>
-                <%= link_to book.title, book %>
-            </h1>
-            <div style="margin: 0 10px">
-                <p>
-                    <%= markdown(book.description) %>
-                </p>
-                <p>
-                    <%=t('tags')%>:
-                    <%book.tag_list.each do |tag|  %>
-                        <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b>
-                    <%end%>
-                </p>
-                <div id="rating">
+    <% if @books.blank? %>
+      <div id="book">
+        <h1><%= t('there_is_no_books_not_found') %></h1>
+      </div>
+    <% else %>
+        <% @books.each do |book| %>
+            <div id="book" class="shelf booktext text-warning select_book" style="position: relative" element="<%= book.id %>">
+                <h1>
+                    <%= link_to book.title, book %>
+                </h1>
+                <div style="margin: 0 10px">
                     <p>
-                      <%= t('book.rating') +': '+ (book.positives.size - book.dislikes.size).to_s %>
+                        <%= markdown(book.description) %>
                     </p>
+                    <p>
+                        <%=t('tags')%>:
+                        <%book.tag_list.each do |tag|  %>
+                            <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b>
+                        <%end%>
+                    </p>
+                    <div id="rating">
+                        <p>
+                          <%= t('book.rating') +': '+ (book.positives.size - book.dislikes.size).to_s %>
+                        </p>
+                    </div>
+                    <p>
+                        <%=t('author')%>:
+                        <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
+                    </p>
+              <%= render :partial => 'like', :locals => {:book => book} %>
+              <%= render :partial => 'close', :locals => {:book => book} %>
                 </div>
-                <p>
-                    <%=t('author')%>:
-                    <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
-                </p>
-          <%= render :partial => 'like', :locals => {:book => book} %>
-          <%= render :partial => 'close', :locals => {:book => book} %>
             </div>
-        </div>
+        <% end %>
     <% end %>
   <div align="center">
     <ul class="pagination pagination-sm">

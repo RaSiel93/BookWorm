@@ -14,13 +14,13 @@ ru:
   back: 'Назад'
   english_lang: 'Английский язык'
 
-  horror: 'Ужасы'
-  fantasy: 'Фэнтези'
-  education: 'Образование'
-  adventure: 'Приключения'
-  computers: 'Компьютерные'
-  comedy: 'Комедийные'
-  detective: 'Детективы'
+  horror: 'УЖАСЫ'
+  fantasy: 'ФЭНТЕЗИ'
+  education: 'ОБРАЗОВАНИЕ'
+  adventure: 'ПРИКЛЮЧЕНИЯ'
+  computers: 'КОМПЬЮТЕРНЫЕ'
+  comedy: 'КОМЕДИЙНЫЕ'
+  detective: 'ДЕТЕКТИВЫ'
   author: 'Автор'
   search: 'Поиск'
 
@@ -69,5 +69,5 @@ ru:
     author: 'Автор'
 
   profile: 'Профиль пользователя'
-
+  there_is_no_books_not_found: 'Книг не найдено'
   ask: 'Вы уверены?'

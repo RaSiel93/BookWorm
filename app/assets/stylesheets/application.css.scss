@@ -19,6 +19,10 @@ body{
   color: #fff;
 }
 
+#main_panel{
+  height: 50px;
+}
+
 .btn{
   height: 30px;
   min-width: 80px;
@@ -29,6 +33,34 @@ body{
   padding: 10px;
   text-indent: 15px;
   color: #333;
+  h1{
+    background-color: #ffa;
+  }
+}
+
+#panel_category, #panel_tags{
+  padding: 0;
+  a{
+    font: bold normal 100% serif;
+    border-radius: 0;
+    color: #4d8fff;
+  }
+  li{
+    text-indent: 10px;
+    padding: 0;
+    font-size: 14px;
+  }
+  a:hover{
+    transition: all 0.5s;
+    color:#fff;
+    background:rgba(161, 138, 138, 0.51);
+  }
+  h4{
+    font: bold normal 130% serif;
+    color:#eee;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 #book>h1{
@@ -174,9 +206,11 @@ shelf  {
   height: 310px;
 }
 
-#authentication form{
-  float: left;
-  margin: 0 5px;
+#authentication{
+  form{
+    float: left;
+    margin: 0 5px;
+  }
 }
 
 .style_theme{
