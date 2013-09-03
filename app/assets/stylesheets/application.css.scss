@@ -8,17 +8,37 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
  *= require markitup/skins/markitup/style
  *= require markitup/sets/markdown/style
  *= require select2
+
+ *= require_tree .
+ *= require_self
  */
+body{
+  color: #fff;
+}
 
 #reader_paper{
   background-color: #ffa;
   padding: 10px;
   text-indent: 15px;
+  color: #333;
+}
+
+#book>h1{
+  font-size: 26px;
+  background-color:rgba(4, 61, 38, 0.8);
+}
+
+#book{
+  padding: 0;
+  h1{
+    box-shadow: 0px -5px 20px 1px black;
+  }
+  a{
+    color: #fff;
+  }
 }
 
 #heart>img{
@@ -144,6 +164,8 @@ shelf  {
 #panel_tags {
   position: fixed;
   right: 0;
+  margin-bottom:0;
+  height: 290px;
 }
 
 #authentication form{

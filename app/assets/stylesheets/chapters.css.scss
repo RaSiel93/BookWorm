@@ -2,8 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-img{
+#font_size img{
   background-color: #fff;
   height: 30px;
   padding: 5px;
+}
+#width_reader{
+  width: 80px;
+  margin:0;
+  margin-bottom: 0;
 }

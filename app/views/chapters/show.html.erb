@@ -1,20 +1,19 @@
 <div class="book shelf">
+  <div style="margin: 0 0 5px 0px" align="center">
   <% if user_signed_in? %>
-    <%= button_to t('chapter.edit'), edit_book_chapter_path(@book, @chapter), :method => :get, :class => 'btn' %>
+    <%= link_to t('chapter.edit'), edit_book_chapter_path(@book, @chapter), :method => :get, :class => 'btn' %>
   <% end %>
-  <%= button_to t('book.content'), @book, :method => :get, :class => 'btn' %>
-  <button class="btn"><%=t('chapter.previous')%></button>
-  <button class="btn"><%=t('chapter.next')%></button>
-  <%= link_to t('chapter.previous'), like_path(@book), method: :post, remote:true, :id => 'heart'%>
-  <%= link_to t('chapter.next'), like_path(@book), method: :post, remote:true, :id => 'heart'%>
-  <%= link_to image_tag('font_size_minus.png'), like_path(@book), method: :post, remote:true%>
-  <%= link_to image_tag('font_size_plus.png'), like_path(@book), method: :post, remote:true%>
-  <label><%=t('chapter.width')%></label>
-  <select name="width_reader">
-    <option>50%</option>
-    <option>70%</option>
-    <option>100%</option>
-  </select>
+      <%= link_to t('book.content'), @book, :method => :get, :class => 'btn' %>
+      <%= link_to t('chapter.previous'), like_path(@book), method: :post, remote:true, :class=>'btn'%>
+      <%= link_to t('chapter.next'), like_path(@book), method: :post, remote:true, :class=>'btn'%>
+      <%= link_to image_tag('font_size_minus.png'), like_path(@book), method: :post, remote:true, :id=>'font_size'%>
+      <%= link_to image_tag('font_size_plus.png'), like_path(@book), method: :post, remote:true, :id=>'font_size'%>
+      <select id="width_reader">
+        <option>50%</option>
+        <option>70%</option>
+        <option>100%</option>
+      </select>
+  </div>
 
   <div id="reader_paper">
   <h1><%= t('chapter.chapter') + ' ' + @chapter.number.to_s + ': ' + @chapter.title %></h1>
