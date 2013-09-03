@@ -32,6 +32,10 @@ en:
   comedy: 'Comedy'
   titles: 'Titles'
 
+  content: 'Content'
+
+  edit_chapter: 'Edit Chapter'
+
   sign_in: "Sign In"
 
   chapter:

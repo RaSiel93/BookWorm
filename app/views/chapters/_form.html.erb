@@ -17,19 +17,22 @@
         <% end %>
 
         <div class="field">
-            <%= f.label t('title') %><br>
+            <%= f.label t('title') %>
             <%= f.text_field :title, size: "40" %>
         </div>
-        <%= f.number_field :number, :value => get_last_number %>
+        <div class="field">
+          <%= f.label t('chapter.number') %>
+          <%= f.number_field :number, :value => get_last_number %>
+        </div>
         <%= f.hidden_field :book_id, :value => book_id %>
         <br>
         <div class="actions">
-            <%= f.submit t("apply")%>
+            <%= f.submit t("apply"), :class=>'btn'%>
         </div>
     </div>
     <div class="col-md-9" align="center">
         <div class="">
-            <%= f.label t('content') %><br>
+            <%= f.label :content, t('content') %>
             <%= f.text_area :content, size: "40x10" %>
         </div>
     </div>

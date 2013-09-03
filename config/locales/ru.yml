@@ -24,6 +24,8 @@ ru:
   author: 'Автор'
   search: 'Поиск'
 
+  content: 'Содержание'
+  edit_chapter: 'Редактирование главы'
 
   username: 'Имя'
   email: 'Электрон адрес'
@@ -34,6 +36,7 @@ ru:
   sign_in: "Вход"
 
   chapter:
+    number: 'Номер главы'
     chapter: 'Глава'
     open: 'Открыть главу'
     add: 'Добавить главу'

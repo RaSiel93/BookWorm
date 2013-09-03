@@ -14,6 +14,11 @@
                         <b><a style="color: orange; font-size:10pt;" href='/tags/<%=tag%>'><%=tag%></a></b>
                     <%end%>
                 </p>
+                <div id="rating">
+                    <p>
+                      <%= t('book.rating') +': '+ (book.positives.size - book.dislikes.size).to_s %>
+                    </p>
+                </div>
                 <p>
                     <%=t('author')%>:
                     <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
