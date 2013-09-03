@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   has_many :books, dependent: :destroy
   validates_presence_of :username
   validates_uniqueness_of :username
+  acts_as_voter
 end

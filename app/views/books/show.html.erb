@@ -1,6 +1,6 @@
 <div class="book  text-warning" >
   <div>
-    <div class="shelf book"  align="center">
+    <div class="shelf book"  align="center" style="position: relative" element="<%= @book.id %>">
         <h1 align="center">
           <%= @book.title %>
         </h1>
@@ -22,19 +22,12 @@
             <%= t('book.rating') +': '+ @book.positives.size.to_s %>
           </p>
         </div>
+        <%= render :partial => 'like', :locals => {:book => @book} %>
       </div>
           <div id="book">
             <% if user_signed_in? %>
                 <%= link_to t('chapter.add'), new_book_chapter_path(book_id: @book.id) %> |
                 <%= link_to t('book.edit'), edit_book_path(@book) %> |
-                <%= link_to t('book.like'), like_path(@book), method: :post, remote:true %> |
-                <%= link_to t('book.remove'), @book, method: :delete, data: { confirm: 'Вы уверены?' } %> |
-
-                <a href class="glyphicons heart" ></a>
-                <!--<img href="glyphicons_012_heart.png"/>-->
-                <!--#<%= link_to "#{image_tag('logo.png')}", like_path(@book), method: :post, :class => 'btn' %>-->
-                <!--<img style="height:22px" href="<%=image_tag('glyphicons_012_heart.png')%>"  />-->
-
             <% end %>
             <%= link_to t('back'), books_path %>
           </div>

@@ -1,0 +1,2 @@
+<%@book = book %>
+<%= link_to image_tag('close.png'), @book, method: :delete, remote:true, :id => 'close', data: { confirm: t('ask') }%>

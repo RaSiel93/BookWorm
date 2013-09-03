@@ -1,1 +1,14 @@
+if(<%=current_user.voted_for? @book%>){
+    $("[element=<%=@book.id%>] img").first().attr('src','/assets/heart_red.png')
+} else {
+    $("[element=<%=@book.id%>] img").first().attr('src','/assets/heart_red_empty.png').hover(
+            function(){
+                $(this).attr('src','/assets/heart_red.png')}
+            ,
+            function(){
+                $(this).attr('src','/assets/heart_red_empty.png').click(function(){
+                    $(this).unbind("mouseenter mouseleave");})
+            });
+}
+
 $('#rating>p').html('<%= t('book.rating') +": "+ @book.positives.size.to_s %>')

@@ -1,6 +1,6 @@
 <div>
     <% @books.each do |book| %>
-        <div class="shelf booktext text-warning select_book">
+        <div id="book" class="shelf booktext text-warning select_book" style="position: relative" element="<%= book.id %>">
             <h1>
                 <%= link_to book.title, book %>
             </h1>
@@ -18,6 +18,8 @@
                     <%=t('author')%>:
                     <a style="color: orange; font-size:10pt;" href='/users/<%=book.user_id%>'><%= User.where(:id => book.user_id).first.username %></a>
                 </p>
+          <%= render :partial => 'like', :locals => {:book => book} %>
+          <%= render :partial => 'close', :locals => {:book => book} %>
             </div>
         </div>
     <% end %>

@@ -15,8 +15,36 @@
  *= require select2
  */
 
+#reader_paper{
+  background-color: #ffa;
+  padding: 10px;
+  text-indent: 15px;
+}
+
+#heart>img{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  height: 18px;
+}
+
+#close>img{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 18px;
+}
+
+a:hover{
+  background-color: none;
+}
+
+#heart>img:hover{
+  background-color: none;
+}
+
 #bookshelf{
-  padding: 0 0 20px 0;
+  padding: 0 0 0 0;
   border-left: 0.6em groove #785520;
   border-right: 0.6em groove #785520;
 
@@ -125,4 +153,50 @@ shelf  {
 
 .style_theme{
   width: 10em;
+}
+
+#back-top {
+  position: fixed;
+  bottom: 30px;
+  margin-left: -150px;
+}
+
+#back-top a {
+  width: 108px;
+  display: block;
+  text-align: center;
+  font: 11px/100% Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #bbb;
+
+  /* замедление */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover {
+  color: #000;
+}
+
+/* изображение со стрелкой (тег span) */
+#back-top span {
+  width: 108px;
+  height: 108px;
+  display: block;
+  margin-bottom: 7px;
+  background: #ddd url(arrow-up.png) no-repeat center center;
+
+  /* закругленные углы */
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+
+  /* замедление */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover span {
+  background-color: #777;
 }

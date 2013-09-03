@@ -5,8 +5,10 @@
   <%= button_to t('book.content'), @book, :method => :get, :class => 'btn' %>
   <button class="btn"><%=t('chapter.previous')%></button>
   <button class="btn"><%=t('chapter.next')%></button>
-  <button class="btn">FONT_SIZE +</button>
-  <button class="btn">FONT_SIZE -</button>
+  <%= link_to t('chapter.previous'), like_path(@book), method: :post, remote:true, :id => 'heart'%>
+  <%= link_to t('chapter.next'), like_path(@book), method: :post, remote:true, :id => 'heart'%>
+  <%= link_to image_tag('font_size_minus.png'), like_path(@book), method: :post, remote:true%>
+  <%= link_to image_tag('font_size_plus.png'), like_path(@book), method: :post, remote:true%>
   <label><%=t('chapter.width')%></label>
   <select name="width_reader">
     <option>50%</option>
@@ -14,7 +16,9 @@
     <option>100%</option>
   </select>
 
+  <div id="reader_paper">
   <h1><%= t('chapter.chapter') + ' ' + @chapter.number.to_s + ': ' + @chapter.title %></h1>
 
   <%= markdown(@chapter.content)%>
+  </div>
 </div>

@@ -50,3 +50,5 @@ en:
       successfully: 'Book was successfully created.'
     update:
       successfully: 'Book was successfully updated.'
+
+  ask: 'Are you sure?'

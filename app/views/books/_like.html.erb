@@ -1,0 +1,16 @@
+<%@book = book %>
+<% if current_user.voted_for? @book %>
+    <%= link_to image_tag('heart_red.png'), like_path(@book), method: :post, remote:true, :id => 'heart'%>
+<% else %>
+    <%= link_to image_tag('heart_red_empty.png'), like_path(@book), method: :post, remote:true, :id => 'heart'%>
+    <script>
+        $("[element=<%=@book.id%>] img").first().hover(
+                function(){
+                    $(this).attr('src','/assets/heart_red.png')}
+                ,
+                function(){
+                    $(this).attr('src','/assets/heart_red_empty.png').click(function(){
+                        $(this).unbind("mouseenter mouseleave");})
+                });
+    </script>
+<% end %>

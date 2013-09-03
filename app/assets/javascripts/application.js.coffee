@@ -10,3 +10,19 @@
 jQuery ->
   $("textarea").markItUp markdownSettings
   $("#book_tag_list").select2({tags: $("#book_tag_list").data('autocomplete-source'), width: 240}  )
+  $("#back-top").hide()
+  $(() ->
+    $(window).scroll(()->
+      if ($(this).scrollTop() > 100)
+        $('#back-top').fadeIn()
+      else
+        $('#back-top').fadeOut()
+
+      $('#back-top a').click(()->
+        $('body,html').animate( {
+          scrollTop: 0
+        }, 800)
+        return false
+      )
+    )
+  )

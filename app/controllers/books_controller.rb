@@ -70,17 +70,14 @@ class BooksController < ApplicationController
     @book.destroy
     respond_to do |format|
       format.html { redirect_to books_url }
+      format.js {}
       format.json { head :no_content }
     end
   end
 
   def set_like
-    #Book.find(current_user.id)
-    #like = Vot.find(:voter_id == current_user.id && :votable_id == @book.id)
-    #@book.votes.up.by_type(current_user).voters
-
-    if @book.vote_registered?
-      @book.downvote_from current_user
+    if current_user.voted_for? @book
+      @book.unliked_by current_user
     else
       @book.liked_by current_user
     end
