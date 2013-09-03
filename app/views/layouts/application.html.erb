@@ -18,6 +18,7 @@
   <link rel="shortcut icon" href="img/favicon.png">
 
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 
   <% if cookies[:style] == 'black' %>
       <%= stylesheet_link_tag "black_style" %>
@@ -27,6 +28,7 @@
 </head>
 
 <body>
+
 <div id="main_panel">
     <div id='authentication' class="col-md-3">
         <% if user_signed_in? %>
@@ -139,7 +141,6 @@
     </div>
   </ul>
 </div>
-
 </div>
 <div id="footer" class="col-lg-12 row-fluid ">
   <p>&copy; <%=t('Александр Поплавский')%></p>

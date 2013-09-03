@@ -23,7 +23,7 @@ Bookworm::Application.routes.draw do
 
   get 'search/:params', to: 'books#index', as: :search
 
-
+  post 'font_size_minus', to: 'chapters#font_size_minus'
 
   post 'books/index/switch_theme', to: 'application#switch_theme'
   post 'books/index/switch_locale', to: 'application#switch_locale'

@@ -64,6 +64,19 @@ class ChaptersController < ApplicationController
     end
   end
 
+
+  def font_size_minus_path
+    respond_to do |format|
+      format.js{}
+    end
+  end
+
+  def font_size_plus_path
+    respond_to do |format|
+      format.js{}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_chapter
