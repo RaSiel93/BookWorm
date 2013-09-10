@@ -2,19 +2,15 @@ body {
   background-image: url(background.jpg);
   background-attachment:fixed;
 }
-#bookshelf{
-  background-image:url(tree4.jpg) ;
-}
 
 #bookshelf{
-  h1{
-    background-color: #910303;
-  }
+
 }
 
 .black {
   background: rgba(0,0,0,0.8);
 }
+
 .select_book:hover{
   background: rgba(200, 200, 100, 0.05);
   transition: all 10s out;

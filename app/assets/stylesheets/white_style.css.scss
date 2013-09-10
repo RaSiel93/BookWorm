@@ -9,6 +9,13 @@ body {
     background-attachment:fixed;
 }
 #bookshelf{
+  a{
+    color: #ccc;
+  }
+  h1{
+    //background-color: #910303;
+    background: rgba(18, 60, 94, 1);
+  }
     background-image:url(tree4.jpg) ;
 }
 .black {
