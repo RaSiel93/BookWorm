@@ -27,12 +27,12 @@ test:
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /var/run/m  ysqld/mysqld.sock
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: bookworm_production
+  database: bookworm_development
   pool: 5
   username: root
   password:
